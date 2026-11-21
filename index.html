@@ -1,0 +1,1942 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>overflow动漫免费樱花 - 官方品牌站,动漫影像内容社区</title>
+<meta name="description" content="overflow动漫免费樱花官方网站，专注动漫影像内容生态与原创动画社区，汇聚创作者精品内容、专题企划与品牌故事，值得信赖的动漫内容平台。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f7a1c4'/%3E%3Cpath d='M32 12c3 7 5 10 5 14a5 5 0 0 1-10 0c0-4 2-7 5-14z' fill='%23fff'/%3E%3Ccircle cx='32' cy='42' r='8' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --sakura-pink:#f388b3;
+    --sakura-deep:#d95c8d;
+    --sakura-soft:#ffe9f1;
+    --sakura-mist:#fff6fa;
+    --ink:#2b2430;
+    --ink-soft:#5c5266;
+    --line:#f3d7e3;
+    --gold:#e8b34b;
+    --violet:#8a6bbf;
+    --sky:#6fa8dc;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(217,92,141,.12);
+    --shadow-lg:0 18px 46px rgba(217,92,141,.18);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--sakura-mist);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer}
+  ul{list-style:none}
+
+  .ofw-wrap{width:min(1180px,92vw);margin:0 auto}
+  .ofw-anchor{scroll-margin-top:118px}
+
+  /* ===== 公告条 + 页头 吸顶 ===== */
+  .ofw-sticky{
+    position:sticky;top:0;z-index:80;
+    backdrop-filter:blur(10px);
+    background:rgba(255,246,250,.94);
+    border-bottom:1px solid var(--line);
+  }
+  .ofw-notice{
+    display:flex;align-items:center;gap:12px;
+    background:linear-gradient(90deg,var(--sakura-deep),var(--sakura-pink) 55%,var(--violet));
+    color:#fff;font-size:13px;
+    padding:8px 0;
+    overflow:hidden;
+  }
+  .ofw-notice__tag{
+    flex:none;background:rgba(255,255,255,.22);
+    border:1px solid rgba(255,255,255,.5);
+    border-radius:999px;padding:1px 10px;font-size:11px;letter-spacing:.08em;
+  }
+  .ofw-notice__track{
+    display:flex;gap:44px;white-space:nowrap;
+    animation:ofw-marquee 26s linear infinite;
+    letter-spacing:.02em;
+  }
+  .ofw-notice__track span{opacity:.95}
+  .ofw-notice__track em{font-style:normal;color:#fff2b0;font-weight:700;margin-right:6px}
+  @keyframes ofw-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  .ofw-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+  .ofw-logo{display:flex;align-items:center;gap:10px;flex:none}
+  .ofw-logo__mark{
+    width:42px;height:42px;border-radius:13px;flex:none;
+    background:radial-gradient(circle at 32% 28%,#ffd4e6,#f388b3 55%,#d95c8d);
+    display:grid;place-items:center;color:#fff;font-weight:800;font-size:18px;
+    box-shadow:0 6px 16px rgba(217,92,141,.32);
+  }
+  .ofw-logo__text{line-height:1.2}
+  .ofw-logo__name{font-size:17px;font-weight:800;letter-spacing:.02em}
+  .ofw-logo__sub{font-size:11px;color:var(--ink-soft);letter-spacing:.22em}
+
+  .ofw-nav{display:flex;align-items:center;gap:4px}
+  .ofw-nav a{
+    font-size:14px;color:var(--ink-soft);padding:7px 12px;border-radius:10px;
+    transition:.2s;font-weight:500;
+  }
+  .ofw-nav a:hover{color:var(--sakura-deep);background:var(--sakura-soft)}
+
+  .ofw-header__tools{display:flex;align-items:center;gap:10px;flex:none}
+  .ofw-search{
+    display:flex;align-items:center;gap:6px;
+    background:#fff;border:1px solid var(--line);border-radius:999px;
+    padding:6px 8px 6px 14px;
+  }
+  .ofw-search input{
+    border:none;outline:none;background:transparent;font-size:13px;width:140px;color:var(--ink);
+  }
+  .ofw-search input::placeholder{color:#bba9c4}
+  .ofw-search button{
+    border:none;border-radius:999px;background:var(--sakura-deep);color:#fff;
+    font-size:12px;padding:5px 12px;transition:.2s;
+  }
+  .ofw-search button:hover{background:#c24b7b}
+  .ofw-search__hint{
+    position:absolute;top:104px;right:6vw;width:280px;background:#fff;
+    border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-lg);
+    padding:10px 14px;font-size:13px;color:var(--ink-soft);display:none;z-index:90;
+  }
+  .ofw-search__hint.is-open{display:block}
+  .ofw-search__hint strong{color:var(--sakura-deep)}
+
+  .ofw-burger{
+    display:none;border:1px solid var(--line);background:#fff;border-radius:10px;
+    padding:8px 10px;flex-direction:column;gap:4px;
+  }
+  .ofw-burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px}
+
+  /* ===== 通用按钮/标签 ===== */
+  .ofw-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    border-radius:999px;padding:11px 24px;font-size:14px;font-weight:600;
+    border:1px solid transparent;transition:.22s;
+  }
+  .ofw-btn--primary{background:linear-gradient(120deg,var(--sakura-deep),var(--sakura-pink));color:#fff;box-shadow:0 10px 24px rgba(217,92,141,.28)}
+  .ofw-btn--primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(217,92,141,.36)}
+  .ofw-btn--ghost{background:#fff;border-color:var(--line);color:var(--sakura-deep)}
+  .ofw-btn--ghost:hover{background:var(--sakura-soft);border-color:var(--sakura-pink)}
+  .ofw-btn--small{padding:7px 15px;font-size:12.5px}
+
+  .ofw-chip{
+    display:inline-block;font-size:12px;padding:3px 11px;border-radius:999px;
+    background:var(--sakura-soft);color:var(--sakura-deep);font-weight:600;
+  }
+  .ofw-chip--violet{background:#f0eafa;color:var(--violet)}
+  .ofw-chip--gold{background:#fdf3dd;color:#b98a1f}
+  .ofw-chip--sky{background:#e8f1fb;color:#3a76b0}
+
+  .ofw-section{padding:72px 0}
+  .ofw-section--tint{background:linear-gradient(180deg,#fff,var(--sakura-mist))}
+  .ofw-sec-head{max-width:700px;margin-bottom:36px}
+  .ofw-sec-head__eyebrow{
+    font-size:12px;letter-spacing:.3em;color:var(--sakura-deep);font-weight:700;
+    display:block;margin-bottom:10px;
+  }
+  .ofw-sec-head h2{font-size:clamp(23px,3vw,32px);letter-spacing:.01em;line-height:1.3}
+  .ofw-sec-head p{margin-top:12px;color:var(--ink-soft);font-size:14.5px}
+
+  /* ===== 首屏 ===== */
+  .ofw-hero{position:relative;overflow:hidden;padding:48px 0 64px}
+  .ofw-hero::before{
+    content:"";position:absolute;inset:-10% auto auto 55%;width:620px;height:620px;
+    background:radial-gradient(circle at center,#ffd9e8 0%,rgba(255,217,232,0) 68%);
+    pointer-events:none;
+  }
+  .ofw-hero::after{
+    content:"";position:absolute;bottom:-160px;left:-120px;width:420px;height:420px;
+    background:radial-gradient(circle at center,#e8dcfb 0%,rgba(232,220,251,0) 70%);
+    pointer-events:none;
+  }
+  .ofw-hero__grid{
+    position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;
+  }
+  .ofw-hero__badge{
+    display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;
+    background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 15px;
+    color:var(--sakura-deep);box-shadow:0 6px 18px rgba(217,92,141,.1);
+  }
+  .ofw-hero__badge i{width:7px;height:7px;border-radius:50%;background:var(--sakura-pink);display:inline-block;animation:ofw-pulse 1.8s infinite}
+  @keyframes ofw-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.75)}}
+  .ofw-hero h1{
+    font-size:clamp(34px,5vw,58px);line-height:1.14;letter-spacing:-.01em;margin:18px 0 8px;
+    background:linear-gradient(112deg,#2b2430 18%,var(--sakura-deep) 58%,var(--violet));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .ofw-hero__slogan{font-size:17px;color:var(--sakura-deep);font-weight:700;letter-spacing:.06em;margin-bottom:16px}
+  .ofw-hero__desc{color:var(--ink-soft);font-size:14.8px;max-width:560px}
+  .ofw-hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 30px}
+  .ofw-hero__stats{display:flex;gap:34px;flex-wrap:wrap}
+  .ofw-hero__stat b{display:block;font-size:26px;color:var(--sakura-deep);letter-spacing:-.01em}
+  .ofw-hero__stat span{font-size:12.5px;color:var(--ink-soft)}
+
+  .ofw-hero__art{position:relative}
+  .ofw-hero__art-main{
+    border-radius:26px;overflow:hidden;box-shadow:var(--shadow-lg);border:6px solid #fff;
+    background:#fff;
+  }
+  .ofw-hero__art-main svg{width:100%;height:auto;display:block}
+  .ofw-hero__float{
+    position:absolute;background:#fff;border-radius:16px;box-shadow:var(--shadow-lg);
+    padding:12px 16px;border:1px solid var(--line);
+  }
+  .ofw-hero__float--top{top:-20px;right:-8px;display:flex;align-items:center;gap:10px}
+  .ofw-hero__float--top b{color:var(--sakura-deep);font-size:15px}
+  .ofw-hero__float--top span{font-size:11.5px;color:var(--ink-soft);display:block;line-height:1.3}
+  .ofw-hero__float--bottom{bottom:-22px;left:-6px;font-size:12.5px;color:var(--ink-soft)}
+  .ofw-hero__float--bottom b{color:var(--violet)}
+
+  /* ===== 关键词深度解析 ===== */
+  .ofw-about__grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  .ofw-about__copy p{font-size:14.6px;color:var(--ink-soft);margin-bottom:16px;text-align:justify}
+  .ofw-about__copy p strong{color:var(--sakura-deep)}
+  .ofw-about__pillars{display:grid;gap:14px}
+  .ofw-pillar{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 22px;display:flex;gap:16px;transition:.22s;
+  }
+  .ofw-pillar:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .ofw-pillar__num{
+    flex:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
+    font-weight:800;color:#fff;font-size:14px;
+  }
+  .ofw-pillar:nth-child(1) .ofw-pillar__num{background:linear-gradient(135deg,var(--sakura-deep),var(--sakura-pink))}
+  .ofw-pillar:nth-child(2) .ofw-pillar__num{background:linear-gradient(135deg,var(--violet),#b79ce0)}
+  .ofw-pillar:nth-child(3) .ofw-pillar__num{background:linear-gradient(135deg,#e8b34b,#f2cd85)}
+  .ofw-pillar:nth-child(4) .ofw-pillar__num{background:linear-gradient(135deg,var(--sky),#9cc4e6)}
+  .ofw-pillar h3{font-size:15.5px;margin-bottom:4px}
+  .ofw-pillar p{font-size:13.4px;color:var(--ink-soft)}
+
+  /* ===== 焦点视频 ===== */
+  .ofw-focus{display:grid;grid-template-columns:1.35fr 1fr;gap:26px}
+  .ofw-focus__main{
+    position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);
+    background:#fff;border:1px solid var(--line);
+  }
+  .ofw-focus__main .ofw-thumb{position:relative}
+  .ofw-focus__main svg{width:100%;height:auto;display:block}
+  .ofw-focus__body{padding:20px 24px 24px}
+  .ofw-focus__body h3{font-size:20px;margin:10px 0 8px}
+  .ofw-focus__body p{font-size:13.8px;color:var(--ink-soft)}
+  .ofw-focus__meta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:14px;font-size:12.5px;color:#8d7f99}
+  .ofw-focus__list{display:grid;gap:16px}
+  .ofw-mini{
+    display:grid;grid-template-columns:132px 1fr;gap:14px;background:#fff;
+    border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.22s;
+  }
+  .ofw-mini:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--sakura-pink)}
+  .ofw-mini svg{width:100%;height:100%;display:block;object-fit:cover}
+  .ofw-mini__body{padding:12px 14px 12px 0}
+  .ofw-mini__body h3{font-size:14.5px;line-height:1.45;margin-bottom:6px}
+  .ofw-mini__body p{font-size:12.4px;color:var(--ink-soft);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .ofw-mini__meta{display:flex;gap:10px;font-size:11.5px;color:#9c8fa8;margin-top:8px}
+
+  /* ===== 视频卡片流 ===== */
+  .ofw-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+  .ofw-filter button{
+    border:1px solid var(--line);background:#fff;border-radius:999px;
+    padding:7px 16px;font-size:13px;color:var(--ink-soft);transition:.2s;
+  }
+  .ofw-filter button.is-active{background:var(--sakura-deep);border-color:var(--sakura-deep);color:#fff;font-weight:700}
+  .ofw-filter button:hover:not(.is-active){border-color:var(--sakura-pink);color:var(--sakura-deep)}
+
+  .ofw-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .ofw-card{
+    background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;
+    transition:.24s;display:flex;flex-direction:column;
+  }
+  .ofw-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--sakura-pink)}
+  .ofw-thumb{position:relative;overflow:hidden}
+  .ofw-thumb svg{width:100%;height:auto;display:block;transition:transform .4s}
+  .ofw-card:hover .ofw-thumb svg{transform:scale(1.045)}
+  .ofw-thumb__tag{
+    position:absolute;top:10px;left:10px;background:rgba(43,36,48,.72);color:#fff;
+    font-size:11px;padding:3px 10px;border-radius:999px;backdrop-filter:blur(4px);
+  }
+  .ofw-thumb__play{
+    position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:.25s;
+    background:linear-gradient(0deg,rgba(43,36,48,.45),rgba(43,36,48,.1));
+  }
+  .ofw-card:hover .ofw-thumb__play{opacity:1}
+  .ofw-thumb__play i{
+    width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.94);
+    display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.24);
+  }
+  .ofw-thumb__play i::after{
+    content:"";width:0;height:0;border-left:15px solid var(--sakura-deep);
+    border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px;
+  }
+  .ofw-card__body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+  .ofw-card__body h3{font-size:15.5px;line-height:1.45;margin-bottom:7px}
+  .ofw-card__body p{font-size:12.8px;color:var(--ink-soft);flex:1}
+  .ofw-card__author{display:flex;align-items:center;gap:8px;margin-top:14px}
+  .ofw-avatar{
+    width:28px;height:28px;border-radius:50%;flex:none;display:grid;place-items:center;
+    font-size:12px;font-weight:800;color:#fff;
+  }
+  .ofw-avatar--a{background:linear-gradient(135deg,#f388b3,#d95c8d)}
+  .ofw-avatar--b{background:linear-gradient(135deg,#8a6bbf,#b79ce0)}
+  .ofw-avatar--c{background:linear-gradient(135deg,#e8b34b,#f2cd85)}
+  .ofw-avatar--d{background:linear-gradient(135deg,#6fa8dc,#9cc4e6)}
+  .ofw-avatar--e{background:linear-gradient(135deg,#5fb49c,#94d5c3)}
+  .ofw-avatar--f{background:linear-gradient(135deg,#e07070,#f0a0a0)}
+  .ofw-card__author span{font-size:12.5px;color:var(--ink-soft)}
+  .ofw-card__author em{font-style:normal;margin-left:auto;font-size:12px;color:#a394ae}
+  .ofw-card__acts{display:flex;align-items:center;gap:8px;margin-top:13px;padding-top:13px;border-top:1px dashed var(--line)}
+  .ofw-act{
+    display:inline-flex;align-items:center;gap:5px;border:none;background:transparent;
+    font-size:12.5px;color:#8d7f99;padding:4px 8px;border-radius:8px;transition:.18s;
+  }
+  .ofw-act:hover{background:var(--sakura-soft);color:var(--sakura-deep)}
+  .ofw-act.is-on{color:var(--sakura-deep);font-weight:700}
+  .ofw-act.is-saved{color:#e05a8b}
+  .ofw-act--share{margin-left:auto}
+
+  /* ===== 专题企划 ===== */
+  .ofw-topics{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .ofw-topic{
+    position:relative;border-radius:20px;overflow:hidden;min-height:250px;
+    display:flex;flex-direction:column;justify-content:flex-end;padding:24px;
+    color:#fff;transition:.28s;box-shadow:var(--shadow);
+  }
+  .ofw-topic:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+  .ofw-topic__bg{position:absolute;inset:0;z-index:0}
+  .ofw-topic__bg svg{width:100%;height:100%;object-fit:cover}
+  .ofw-topic::after{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(0deg,rgba(28,18,34,.82),rgba(28,18,34,.12));
+  }
+  .ofw-topic>*{position:relative;z-index:2}
+  .ofw-topic__state{
+    align-self:flex-start;font-size:11px;background:rgba(255,255,255,.22);
+    border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:3px 11px;margin-bottom:10px;
+  }
+  .ofw-topic h3{font-size:18px;margin-bottom:6px}
+  .ofw-topic p{font-size:12.8px;opacity:.86;max-width:280px}
+  .ofw-topic__foot{display:flex;gap:14px;font-size:11.8px;opacity:.82;margin-top:12px}
+
+  /* ===== 创作者 ===== */
+  .ofw-creators{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ofw-creator{
+    background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px 20px;
+    text-align:center;transition:.24s;
+  }
+  .ofw-creator:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--sakura-pink)}
+  .ofw-creator__avatar{
+    width:64px;height:64px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;
+    font-size:22px;font-weight:800;color:#fff;box-shadow:0 8px 20px rgba(217,92,141,.28);
+  }
+  .ofw-creator h3{font-size:16px}
+  .ofw-creator__field{font-size:12px;color:var(--sakura-deep);font-weight:600;margin:3px 0 10px}
+  .ofw-creator p{font-size:12.6px;color:var(--ink-soft);min-height:56px}
+  .ofw-creator__stats{display:flex;justify-content:center;gap:18px;margin:12px 0 14px;font-size:12px;color:var(--ink-soft)}
+  .ofw-creator__stats b{color:var(--ink);font-size:13.5px}
+
+  /* ===== 影像墙 ===== */
+  .ofw-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .ofw-wall__item{
+    position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);
+    background:#fff;transition:.24s;
+  }
+  .ofw-wall__item:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .ofw-wall__item svg{width:100%;height:100%;display:block;object-fit:cover}
+  .ofw-wall__item--big{grid-column:span 2;grid-row:span 2}
+  .ofw-wall__cap{
+    position:absolute;left:0;right:0;bottom:0;padding:14px 12px 10px;
+    background:linear-gradient(0deg,rgba(28,18,34,.74),rgba(28,18,34,0));
+    color:#fff;font-size:12px;line-height:1.4;
+  }
+  .ofw-wall__cap b{display:block;font-size:12.8px}
+
+  /* ===== 评论 ===== */
+  .ofw-reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .ofw-review{
+    background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;
+    display:flex;flex-direction:column;gap:12px;transition:.2s;
+  }
+  .ofw-review:hover{box-shadow:var(--shadow)}
+  .ofw-review__top{display:flex;align-items:center;gap:10px}
+  .ofw-review__top b{font-size:13.5px}
+  .ofw-review__top span{font-size:11.5px;color:#a394ae;margin-left:auto}
+  .ofw-review p{font-size:13px;color:var(--ink-soft);flex:1}
+  .ofw-review__stars{font-size:12px;letter-spacing:2px;color:var(--gold)}
+
+  /* ===== 榜单 ===== */
+  .ofw-board{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .ofw-board__panel{
+    background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 24px;
+  }
+  .ofw-board__panel h3{font-size:16.5px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .ofw-board__panel h3::before{content:"";width:4px;height:16px;border-radius:3px;background:var(--sakura-deep)}
+  .ofw-rank{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line)}
+  .ofw-rank:last-child{border-bottom:none}
+  .ofw-rank__no{
+    flex:none;width:24px;height:24px;border-radius:8px;background:var(--sakura-soft);
+    color:var(--sakura-deep);font-size:12px;font-weight:800;display:grid;place-items:center;
+  }
+  .ofw-rank:nth-child(2) .ofw-rank__no{background:linear-gradient(135deg,var(--sakura-deep),var(--sakura-pink));color:#fff}
+  .ofw-rank:nth-child(3) .ofw-rank__no{background:#f3e3c4;color:#b98a1f}
+  .ofw-rank__title{font-size:13.5px;flex:1}
+  .ofw-rank__title small{display:block;font-size:11.5px;color:#a394ae}
+  .ofw-rank__val{font-size:12px;color:var(--sakura-deep);font-weight:700}
+
+  /* ===== 动态 ===== */
+  .ofw-news{display:grid;gap:14px}
+  .ofw-news__item{
+    display:grid;grid-template-columns:92px 1fr auto;gap:18px;align-items:center;
+    background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 20px;transition:.2s;
+  }
+  .ofw-news__item:hover{border-color:var(--sakura-pink);box-shadow:var(--shadow)}
+  .ofw-news__date{font-size:12.5px;color:var(--sakura-deep);font-weight:700;letter-spacing:.02em}
+  .ofw-news__item h3{font-size:14.5px;margin-bottom:3px}
+  .ofw-news__item p{font-size:12.6px;color:var(--ink-soft)}
+
+  /* ===== FAQ ===== */
+  .ofw-faq{display:grid;gap:10px;max-width:860px}
+  .ofw-faq details{
+    background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 18px;transition:.2s;
+  }
+  .ofw-faq details[open]{border-color:var(--sakura-pink);box-shadow:var(--shadow)}
+  .ofw-faq summary{
+    cursor:pointer;padding:15px 0;font-size:14px;font-weight:600;list-style:none;
+    display:flex;align-items:center;gap:10px;
+  }
+  .ofw-faq summary::-webkit-details-marker{display:none}
+  .ofw-faq summary::before{
+    content:"+";flex:none;width:20px;height:20px;border-radius:6px;background:var(--sakura-soft);
+    color:var(--sakura-deep);display:grid;place-items:center;font-weight:800;font-size:13px;
+  }
+  .ofw-faq details[open] summary::before{content:"–"}
+  .ofw-faq p{padding:0 0 16px 30px;font-size:13.2px;color:var(--ink-soft)}
+
+  /* ===== 投稿/联系 ===== */
+  .ofw-join{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;
+    background:linear-gradient(125deg,#fff,var(--sakura-soft) 70%,#f4ecfb);
+    border:1px solid var(--line);border-radius:26px;padding:44px;
+  }
+  .ofw-join h2{font-size:clamp(22px,2.6vw,29px);line-height:1.35;margin-bottom:14px}
+  .ofw-join p{font-size:14px;color:var(--ink-soft);margin-bottom:22px}
+  .ofw-join__actions{display:flex;flex-wrap:wrap;gap:12px}
+  .ofw-join__list{display:grid;gap:12px}
+  .ofw-join__row{
+    display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);
+    border-radius:14px;padding:14px 18px;font-size:13.4px;color:var(--ink-soft);
+  }
+  .ofw-join__row b{color:var(--sakura-deep);flex:none}
+
+  /* ===== 页脚 ===== */
+  .ofw-footer{background:#241b2c;color:#cdbfd6;padding:56px 0 26px;margin-top:20px}
+  .ofw-footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px;margin-bottom:38px}
+  .ofw-footer h4{color:#fff;font-size:14px;margin-bottom:14px;letter-spacing:.04em}
+  .ofw-footer p,.ofw-footer li{font-size:12.8px;line-height:1.9}
+  .ofw-footer a:hover{color:#f7a1c4}
+  .ofw-footer__brand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  .ofw-footer__brand .ofw-logo__mark{width:36px;height:36px;font-size:15px;border-radius:11px}
+  .ofw-footer__brand b{color:#fff;font-size:15px}
+  .ofw-footer__bottom{
+    border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;
+    flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:12px;color:#9b8ba8;
+  }
+
+  /* ===== 弹窗 & Toast ===== */
+  .ofw-modal{
+    position:fixed;inset:0;z-index:120;display:none;place-items:center;padding:20px;
+    background:rgba(36,27,44,.55);backdrop-filter:blur(4px);
+  }
+  .ofw-modal.is-open{display:grid}
+  .ofw-modal__box{
+    background:#fff;border-radius:22px;max-width:520px;width:100%;padding:30px;
+    box-shadow:0 30px 80px rgba(0,0,0,.3);animation:ofw-pop .26s ease;
+  }
+  @keyframes ofw-pop{from{transform:translateY(14px) scale(.97);opacity:0}to{transform:none;opacity:1}}
+  .ofw-modal__box h3{font-size:19px;margin-bottom:10px}
+  .ofw-modal__box p{font-size:13.6px;color:var(--ink-soft);margin-bottom:18px}
+  .ofw-modal__close{
+    float:right;border:none;background:var(--sakura-soft);color:var(--sakura-deep);
+    width:30px;height:30px;border-radius:50%;font-size:15px;font-weight:700;
+  }
+  .ofw-modal__field{display:grid;gap:8px;margin-bottom:14px}
+  .ofw-modal__field label{font-size:12.6px;font-weight:700;color:var(--ink)}
+  .ofw-modal__field input,.ofw-modal__field textarea{
+    border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:13.4px;
+    font-family:inherit;outline:none;resize:vertical;
+  }
+  .ofw-modal__field input:focus,.ofw-modal__field textarea:focus{border-color:var(--sakura-pink)}
+
+  .ofw-toast{
+    position:fixed;left:50%;bottom:42px;transform:translate(-50%,20px);z-index:200;
+    background:#2b2430;color:#fff;font-size:13px;padding:11px 22px;border-radius:999px;
+    box-shadow:0 14px 34px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:.26s;
+  }
+  .ofw-toast.is-show{opacity:1;transform:translate(-50%,0)}
+
+  .ofw-top{
+    position:fixed;right:26px;bottom:30px;z-index:110;width:46px;height:46px;border-radius:50%;
+    border:none;background:var(--sakura-deep);color:#fff;font-size:18px;display:grid;place-items:center;
+    box-shadow:0 10px 26px rgba(217,92,141,.4);opacity:0;pointer-events:none;transition:.26s;
+  }
+  .ofw-top.is-show{opacity:1;pointer-events:auto}
+  .ofw-top:hover{transform:translateY(-3px)}
+
+  /* ===== 响应式 ===== */
+  @media (max-width:1024px){
+    .ofw-hero__grid,.ofw-about__grid,.ofw-focus,.ofw-board,.ofw-join{grid-template-columns:1fr}
+    .ofw-cards,.ofw-topics,.ofw-reviews{grid-template-columns:repeat(2,1fr)}
+    .ofw-creators{grid-template-columns:repeat(2,1fr)}
+    .ofw-footer__grid{grid-template-columns:1fr 1fr}
+    .ofw-search__hint{right:4vw}
+  }
+  @media (max-width:760px){
+    .ofw-nav{
+      display:none;position:absolute;left:0;right:0;top:100%;
+      background:#fff;flex-direction:column;align-items:stretch;padding:10px 4vw 16px;
+      gap:2px;border-bottom:1px solid var(--line);box-shadow:var(--shadow-lg);
+    }
+    .ofw-nav.is-open{display:flex}
+    .ofw-nav a{padding:11px 14px}
+    .ofw-burger{display:flex}
+    .ofw-search input{width:96px}
+    .ofw-header{position:relative}
+    .ofw-hero__float--top{right:0;top:-14px;padding:9px 13px}
+    .ofw-hero__float--bottom{left:0;bottom:-16px}
+    .ofw-cards,.ofw-topics,.ofw-reviews,.ofw-creators{grid-template-columns:1fr}
+    .ofw-wall{grid-template-columns:repeat(2,1fr)}
+    .ofw-wall__item--big{grid-column:span 2;grid-row:span 1}
+    .ofw-mini{grid-template-columns:110px 1fr}
+    .ofw-join{padding:26px 20px}
+    .ofw-footer__grid{grid-template-columns:1fr}
+    .ofw-news__item{grid-template-columns:1fr;gap:6px}
+    .ofw-search__hint{right:4vw;left:4vw;width:auto;top:150px}
+    .ofw-section{padding:52px 0}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ============ 吸顶：公告条 + 页头 ============ -->
+<div class="ofw-sticky">
+  <div class="ofw-notice">
+    <div class="ofw-wrap" style="display:flex;align-items:center;gap:12px;overflow:hidden">
+      <span class="ofw-notice__tag">官方发布</span>
+      <div class="ofw-notice__track">
+        <span><em>新增</em>「樱花下的分镜」专题企划上线，收录 12 部原创短片剧本拆解</span>
+        <span><em>更新</em>创作者扶持计划第四期报名通道开启，截止 12 月 18 日</span>
+        <span><em>上新</em>overflow动漫免费樱花影像墙新增 36 组成片与幕后花絮</span>
+        <span><em>新增</em>「樱花下的分镜」专题企划上线，收录 12 部原创短片剧本拆解</span>
+        <span><em>更新</em>创作者扶持计划第四期报名通道开启，截止 12 月 18 日</span>
+        <span><em>上新</em>overflow动漫免费樱花影像墙新增 36 组成片与幕后花絮</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ofw-wrap ofw-header">
+    <a class="ofw-logo" href="#ofw-home" aria-label="overflow动漫免费樱花 品牌首页">
+      <span class="ofw-logo__mark">樱</span>
+      <span class="ofw-logo__text">
+        <span class="ofw-logo__name">overflow动漫免费樱花</span>
+        <span class="ofw-logo__sub">SAKURA ANIME STUDIO</span>
+      </span>
+    </a>
+
+    <nav class="ofw-nav" id="ofw-nav" aria-label="主导航">
+      <a href="#ofw-home">首页</a>
+      <a href="#ofw-about">关于我们</a>
+      <a href="#ofw-focus">焦点影像</a>
+      <a href="#ofw-topics">专题企划</a>
+      <a href="#ofw-creators">创作者</a>
+      <a href="#ofw-wall">影像墙</a>
+      <a href="#ofw-news">企业动态</a>
+      <a href="#ofw-faq">帮助</a>
+      <a href="#ofw-join">联系我们</a>
+    </nav>
+
+    <div class="ofw-header__tools">
+      <div class="ofw-search">
+        <input type="search" id="ofw-search-input" placeholder="搜索作品 / 创作者" aria-label="站内搜索">
+        <button type="button" id="ofw-search-btn">搜索</button>
+      </div>
+      <button class="ofw-burger" id="ofw-burger" aria-label="展开导航" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="ofw-search__hint" id="ofw-search-hint" role="status" aria-live="polite"></div>
+
+<!-- ============ 首屏 ============ -->
+<header class="ofw-hero ofw-anchor" id="ofw-home">
+  <div class="ofw-wrap ofw-hero__grid">
+    <div>
+      <span class="ofw-hero__badge"><i></i>官方网站 · 品牌自营内容生态</span>
+      <h1>overflow动漫免费樱花</h1>
+      <p class="ofw-hero__slogan">让每一帧樱花都值得被认真对待</p>
+      <p class="ofw-hero__desc">
+        overflow动漫免费樱花官方网站，是一家深耕动漫影像领域的原创内容品牌与企业级视频门户。我们以樱花季美学为视觉原点，围绕动画短片、分镜解析、创作者访谈与城市影像，为动漫爱好者搭建一个高品质、正版化、可持续的内容社区。平台坚持用户至上与匠心制作，从企划立项到成片发布全流程透明公开，让创作者被看见，让好内容被留下。
+      </p>
+      <div class="ofw-hero__actions">
+        <a class="ofw-btn ofw-btn--primary" href="#ofw-focus">进入焦点影像</a>
+        <a class="ofw-btn ofw-btn--ghost" href="#ofw-join">创作者报名</a>
+        <button class="ofw-btn ofw-btn--ghost" type="button" id="ofw-hero-share">分享品牌主页</button>
+      </div>
+      <div class="ofw-hero__stats">
+        <div class="ofw-hero__stat"><b data-count="1860">1860</b><span>原创影像作品</span></div>
+        <div class="ofw-hero__stat"><b data-count="326">326</b><span>签约创作者</span></div>
+        <div class="ofw-hero__stat"><b data-count="48">48</b><span>已上线专题企划</span></div>
+      </div>
+    </div>
+
+    <div class="ofw-hero__art">
+      <div class="ofw-hero__art-main">
+        <svg viewBox="0 0 640 460" role="img" aria-label="樱花树下的动画短片主视觉，粉樱飘落与远山轮廓">
+          <defs>
+            <linearGradient id="ofw-sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffeef5"/>
+              <stop offset=".55" stop-color="#ffd7e6"/>
+              <stop offset="1" stop-color="#f6e9fb"/>
+            </linearGradient>
+            <linearGradient id="ofw-hill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#c9a7d8"/>
+              <stop offset="1" stop-color="#9b7cb5"/>
+            </linearGradient>
+            <linearGradient id="ofw-trunk" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#7c5568"/>
+              <stop offset="1" stop-color="#4a2f3f"/>
+            </linearGradient>
+          </defs>
+          <rect width="640" height="460" fill="url(#ofw-sky)"/>
+          <circle cx="500" cy="98" r="52" fill="#fff" opacity=".7"/>
+          <circle cx="500" cy="98" r="30" fill="#fff"/>
+          <path d="M0 330 Q120 246 250 306 T520 288 T640 320 V460 H0 Z" fill="url(#ofw-hill)" opacity=".85"/>
+          <path d="M0 372 Q150 316 300 360 T640 356 V460 H0 Z" fill="#6d5588" opacity=".78"/>
+          <path d="M300 460c-6-88 6-150 22-206 9-31 26-48 44-52-14 24-19 46-16 70 4 38 2 92-4 188z" fill="url(#ofw-trunk)"/>
+          <path d="M352 258c34-28 72-42 108-38-30 12-58 30-84 54zM330 214c28-32 66-52 104-52-30 16-56 40-78 66z" fill="url(#ofw-trunk)"/>
+          <g>
+            <circle cx="420" cy="176" r="58" fill="#ffb7d0" opacity=".92"/>
+            <circle cx="474" cy="206" r="44" fill="#ffc9dc" opacity=".9"/>
+            <circle cx="368" cy="204" r="46" fill="#ffd3e2" opacity=".9"/>
+            <circle cx="404" cy="140" r="36" fill="#fff0f6" opacity=".95"/>
+            <circle cx="452" cy="152" r="28" fill="#ffe2ec"/>
+            <circle cx="342" cy="166" r="26" fill="#ffe9f1"/>
+          </g>
+          <g fill="#ffffff" opacity=".85">
+            <circle cx="112" cy="118" r="4"/><circle cx="168" cy="84" r="3"/><circle cx="232" cy="140" r="5"/>
+            <circle cx="92" cy="212" r="3"/><circle cx="286" cy="96" r="4"/><circle cx="212" cy="58" r="3"/>
+            <circle cx="546" cy="178" r="4"/><circle cx="584" cy="240" r="3"/><circle cx="486" cy="300" r="5"/>
+            <circle cx="366" cy="330" r="3"/><circle cx="142" cy="316" r="4"/><circle cx="248" cy="368" r="3"/>
+          </g>
+          <g fill="#f388b3" opacity=".8">
+            <ellipse cx="130" cy="160" rx="6" ry="4" transform="rotate(-24 130 160)"/>
+            <ellipse cx="470" cy="102" rx="6" ry="4" transform="rotate(18 470 102)"/>
+            <ellipse cx="300" cy="252" rx="5" ry="3.4" transform="rotate(-12 300 252)"/>
+            <ellipse cx="558" cy="330" rx="6" ry="4" transform="rotate(28 558 330)"/>
+          </g>
+          <g transform="translate(468,352)">
+            <circle r="22" fill="#fff" opacity=".92"/>
+            <path d="M-5-8 L12 0 L-5 8 Z" fill="#d95c8d"/>
+          </g>
+          <text x="40" y="424" font-family="sans-serif" font-size="15" fill="#5c3f63" opacity=".7">春 · 分镜第 07 号</text>
+        </svg>
+      </div>
+      <div class="ofw-hero__float ofw-hero__float--top">
+        <b>4K</b><span>正版高清<br>原片母版</span>
+      </div>
+      <div class="ofw-hero__float ofw-hero__float--bottom">
+        本周新增 <b>26</b> 部原创短片 · 持续运营中
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 关键词深度解析 ============ -->
+<section class="ofw-section ofw-section--tint ofw-anchor" id="ofw-about">
+  <div class="ofw-wrap">
+    <div class="ofw-sec-head">
+      <span class="ofw-sec-head__eyebrow">BRAND INSIGHT</span>
+      <h2>关于 overflow动漫免费樱花：一个面向动漫影像的品牌内容生态</h2>
+      <p>我们把「动漫」看作一种影像语言，把「樱花」看作一种时间感。品牌官网在此完整呈现我们对内容、创作者与社区的长期理解。</p>
+    </div>
+
+    <div class="ofw-about__grid">
+      <div class="ofw-about__copy">
+        <p>overflow动漫免费樱花并不是一个简单的作品堆放地，而是一个由<strong>企划、制作、审片、发布、复盘</strong>五个环节构成的完整内容体系。我们相信，动漫影像的价值不在于时长的堆砌，而在于分镜推进的节奏、角色呼吸的停顿、色彩过渡时那半秒钟的犹豫。因此，品牌从成立之初就把「精品内容」写进流程规范：每一部进入官网首页的短片，都要经过至少三轮内部审片与一次公开的创作者互评。</p>
+        <p>在 overflow动漫免费樱花，关键词「overflow」被我们理解为一种溢出——情绪的溢出、想象力的溢出、创作者表达欲的溢出。我们搭建这个企业级平台，是希望为那些溢出的部分找到容器。官网的焦点影像区、专题企划区与影像墙，分别承担「被看见」「被理解」「被收藏」三种不同的功能，让一部作品在不同阶段都能获得合适的呈现方式。这也是我们与传统视频站最大的区别：我们不追求一次性的曝光，而追求作品生命周期的延长。</p>
+        <p>作为深耕垂直领域的动漫内容品牌，我们同样重视<strong>行业领先</strong>的制作标准与<strong>值得信赖</strong>的版权规范。平台所有上线作品均与创作者签署正式授权，标注清晰的署名信息与创作年份，并支持原创声明查询。我们为创作者提供从剧本工坊、分镜评审到调色指导的全链路支持，也为品牌合作方提供规范的商务对接流程。正版、高清、可溯源，是 overflow动漫免费樱花对所有用户的承诺。</p>
+        <p>社区是品牌的另一半。我们设有创作者社群、话题讨论区与每月一次的线上看片会，鼓励真实的反馈而非客套的赞美。用户至上不意味着迎合，而是认真对待每一条留言：哪一帧转场太急、哪一句台词不够口语、哪一个镜头的景别可以再退半步。这些具体的意见，构成了 overflow动漫免费樱花持续成长的养料。我们希望这里既有企业级的秩序感，也有同好之间那种不必客气的温暖。</p>
+        <p>面向未来，品牌将继续围绕动漫影像展开多元尝试：与高校动画专业共建实践基地、发起面向新人的短片挑战赛、推出聚焦在地文化的城市动画企划。我们相信，一个真正有影响力的内容生态，必须同时照顾好创作者的生计、观众的审美与行业的公共价值。overflow动漫免费樱花愿意做那个耐心的组织者，把散落的樱花，收拢成一棵有年轮的树。</p>
+      </div>
+
+      <div class="ofw-about__pillars">
+        <div class="ofw-pillar">
+          <span class="ofw-pillar__num">01</span>
+          <div>
+            <h3>原创优先的内容机制</h3>
+            <p>官网首页优先推荐原创短片与独立企划，所有作品标注创作团队、分镜作者与制作年份，让署名成为习惯。</p>
+          </div>
+        </div>
+        <div class="ofw-pillar">
+          <span class="ofw-pillar__num">02</span>
+          <div>
+            <h3>创作者成长陪伴体系</h3>
+            <p>从新人扶持到签约孵化，平台提供剧本诊断、分镜工作坊与成片复盘会，陪伴创作者走过最难的三个阶段。</p>
+          </div>
+        </div>
+        <div class="ofw-pillar">
+          <span class="ofw-pillar__num">03</span>
+          <div>
+            <h3>正版高清的观看体验</h3>
+            <p>统一母版管理，提供多码率适配与字幕校对，确保每一帧樱花的分层都经得起放大检验。</p>
+          </div>
+        </div>
+        <div class="ofw-pillar">
+          <span class="ofw-pillar__num">04</span>
+          <div>
+            <h3>真实温暖的社区氛围</h3>
+            <p>鼓励具体、可执行的评论；设立举报与反馈通道，让讨论保持友善，让批评保持锐度。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 焦点影像 ============ -->
+<section class="ofw-section ofw-anchor" id="ofw-focus">
+  <div class="ofw-wrap">
+    <div class="ofw-sec-head">
+      <span class="ofw-sec-head__eyebrow">FOCUS WORKS</span>
+      <h2>焦点影像：本周由编辑部与创作者共同推荐的六部作品</h2>
+      <p>每一部都附带分镜思路与创作手记，方便你在看完之后，继续往下想。</p>
+    </div>
+
+    <div class="ofw-focus">
+      <article class="ofw-focus__main">
+        <div class="ofw-thumb">
+          <svg viewBox="0 0 720 405" role="img" aria-label="焦点作品《花期七日》封面，雨夜电车与飘落樱花的动画场景">
+            <defs>
+              <linearGradient id="ofw-f1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2b2438"/>
+                <stop offset="1" stop-color="#5b3f63"/>
+              </linearGradient>
+              <linearGradient id="ofw-f2" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#ffb7d0"/>
+                <stop offset="1" stop-color="#d95c8d"/>
+              </linearGradient>
+            </defs>
+            <rect width="720" height="405" fill="url(#ofw-f1)"/>
+            <circle cx="580" cy="88" r="42" fill="#ffe9f1" opacity=".85"/>
+            <path d="M0 262 L720 232 V405 H0 Z" fill="#3a2c47"/>
+            <path d="M0 300 L720 268 V405 H0 Z" fill="#241b2c"/>
+            <g stroke="#8a6bbf" stroke-width="2" opacity=".55">
+              <path d="M0 340 H720"/><path d="M0 366 H720"/>
+            </g>
+            <g fill="url(#ofw-f2)">
+              <rect x="128" y="176" width="238" height="132" rx="16"/>
+            </g>
+            <g fill="#ffe9f1" opacity=".9">
+              <rect x="152" y="198" width="66" height="46" rx="7"/>
+              <rect x="236" y="198" width="66" height="46" rx="7"/>
+              <rect x="152" y="258" width="66" height="32" rx="7"/>
+              <rect x="236" y="258" width="66" height="32" rx="7"/>
+            </g>
+            <g fill="#2b2438">
+              <circle cx="172" cy="336" r="16"/><circle cx="322" cy="336" r="16"/>
+            </g>
+            <g fill="#ffc9dc" opacity=".9">
+              <ellipse cx="420" cy="150" rx="9" ry="6" transform="rotate(-20 420 150)"/>
+              <ellipse cx="488" cy="196" rx="8" ry="5" transform="rotate(24 488 196)"/>
+              <ellipse cx="540" cy="130" rx="7" ry="5" transform="rotate(-8 540 130)"/>
+              <ellipse cx="372" cy="240" rx="8" ry="5" transform="rotate(14 372 240)"/>
+              <ellipse cx="612" cy="222" rx="9" ry="6" transform="rotate(-28 612 222)"/>
+              <ellipse cx="452" cy="292" rx="7" ry="5" transform="rotate(6 452 292)"/>
+            </g>
+            <circle cx="360" cy="200" r="34" fill="#fff" opacity=".94"/>
+            <path d="M352 186 L378 200 L352 214 Z" fill="#d95c8d"/>
+            <text x="34" y="60" font-family="sans-serif" font-size="18" fill="#ffd7e6">EP.01 雨夜的第七天</text>
+          </svg>
+          <span class="ofw-thumb__tag">原创短片 · 4K 高清</span>
+        </div>
+        <div class="ofw-focus__body">
+          <span class="ofw-chip">本期主推</span>
+          <h3>《花期七日》：用一场雨，把告白延后了整整一周</h3>
+          <p>故事从一间深夜电车调度室开始。实习生小野在第七次夜班时，收到了来自三年前自己的一封信。全片 14 分钟，采用双层时间线剪辑，樱花只在回忆段落开放，现实段落始终是湿润的冷灰。导演在手记里写道：我们不想拍樱花有多美，只想拍它落下的速度有多快。</p>
+          <div class="ofw-focus__meta">
+            <span>导演：林间早川</span><span>分镜：南野薰</span><span>时长 14:22</span><span>2026 年春季企划</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="ofw-focus__list">
+        <article class="ofw-mini">
+          <svg viewBox="0 0 320 240" role="img" aria-label="作品《站台十分钟》封面，清晨站台与逆光剪影">
+            <rect width="320" height="240" fill="#e8f1fb"/>
+            <circle cx="238" cy="72" r="34" fill="#ffd88a"/>
+            <path d="M0 176 H320 V240 H0 Z" fill="#9fb6cf"/>
+            <path d="M0 198 H320 V240 H0 Z" fill="#7d97b5"/>
+            <g fill="#3a4b63">
+              <rect x="44" y="126" width="16" height="52" rx="6"/>
+              <circle cx="52" cy="112" r="13"/>
+              <rect x="150" y="130" width="16" height="48" rx="6"/>
+              <circle cx="158" cy="116" r="12"/>
+            </g>
+            <g stroke="#d3e2f0" stroke-width="3"><path d="M0 214 H320"/></g>
+            <circle cx="238" cy="70" r="16" fill="#fff" opacity=".9"/>
+            <path d="M232 60 L246 70 L232 80 Z" fill="#3a76b0"/>
+          </svg>
+          <div class="ofw-mini__body">
+            <h3>《站台十分钟》</h3>
+            <p>一个关于通勤者与陌生人的静默短片，全片没有一句台词，靠环境声与镜头调度完成叙事。</p>
+            <div class="ofw-mini__meta"><span>城市探索</span><span>08:41</span></div>
+          </div>
+        </article>
+
+        <article class="ofw-mini">
+          <svg viewBox="0 0 320 240" role="img" aria-label="作品《纸鹤工坊》封面，暖色桌面与折纸纸鹤">
+            <rect width="320" height="240" fill="#fdf3dd"/>
+            <rect x="0" y="150" width="320" height="90" fill="#e8c68a"/>
+            <g fill="#fff">
+              <path d="M96 116 L168 78 L214 116 L168 138 Z" opacity=".96"/>
+              <path d="M168 78 L150 46 L176 62 Z"/>
+              <path d="M214 116 L252 104 L224 132 Z"/>
+            </g>
+            <g fill="#e8b34b">
+              <path d="M96 116 L60 128 L84 142 Z"/>
+            </g>
+            <circle cx="256" cy="60" r="22" fill="#ffe9b8"/>
+            <g stroke="#d9a94a" stroke-width="2" opacity=".6"><path d="M0 194 H320"/></g>
+            <circle cx="256" cy="58" r="14" fill="#fff" opacity=".92"/>
+            <path d="M250 50 L262 58 L250 66 Z" fill="#b98a1f"/>
+          </svg>
+          <div class="ofw-mini__body">
+            <h3>《纸鹤工坊》</h3>
+            <p>手作题材定格动画，从一张和纸到一只纸鹤，耗时 21 天，记录手指与纸面的每一次摩擦。</p>
+            <div class="ofw-mini__meta"><span>手作DIY</span><span>11:06</span></div>
+          </div>
+        </article>
+
+        <article class="ofw-mini">
+          <svg viewBox="0 0 320 240" role="img" aria-label="作品《湖心回声》封面，冷调湖面与远山倒影">
+            <defs>
+              <linearGradient id="ofw-lake" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#bcd8e8"/>
+                <stop offset="1" stop-color="#6d94b0"/>
+              </linearGradient>
+            </defs>
+            <rect width="320" height="240" fill="#dbe9f2"/>
+            <path d="M0 128 L70 76 L136 118 L204 62 L320 122 V148 H0 Z" fill="#8fa9bd"/>
+            <rect x="0" y="148" width="320" height="92" fill="url(#ofw-lake)"/>
+            <path d="M0 148 L70 96 L136 138 L204 82 L320 142 V148 Z" fill="#7b94a8" opacity=".55"/>
+            <g stroke="#eaf4fa" stroke-width="2" opacity=".75">
+              <path d="M24 176 H96"/><path d="M132 192 H226"/><path d="M60 210 H150"/><path d="M230 220 H302"/>
+            </g>
+            <circle cx="160" cy="176" r="15" fill="#fff" opacity=".9"/>
+            <path d="M154 168 L166 176 L154 184 Z" fill="#3a76b0"/>
+          </svg>
+          <div class="ofw-mini__body">
+            <h3>《湖心回声》</h3>
+            <p>旅行见闻类动画纪录片，以湖畔小镇为舞台，讲述一位返乡录音师收集自然声的故事。</p>
+            <div class="ofw-mini__meta"><span>旅行见闻</span><span>16:20</span></div>
+          </div>
+        </article>
+
+        <article class="ofw-mini">
+          <svg viewBox="0 0 320 240" role="img" aria-label="作品《猫与旧书店》封面，暖灯下的猫与书架">
+            <rect width="320" height="240" fill="#3a2c47"/>
+            <rect x="26" y="42" width="268" height="150" fill="#4d3a5c"/>
+            <g fill="#f0d9a8">
+              <rect x="44" y="60" width="28" height="60"/><rect x="80" y="60" width="22" height="60"/>
+              <rect x="110" y="60" width="30" height="60"/><rect x="150" y="60" width="24" height="60"/>
+              <rect x="184" y="60" width="28" height="60"/><rect x="222" y="60" width="22" height="60"/>
+            </g>
+            <g fill="#e8935c">
+              <rect x="44" y="130" width="30" height="46"/><rect x="82" y="130" width="24" height="46"/>
+              <rect x="114" y="130" width="28" height="46"/><rect x="150" y="130" width="22" height="46"/>
+            </g>
+            <g fill="#1e1626">
+              <ellipse cx="244" cy="172" rx="42" ry="30"/>
+              <circle cx="284" cy="146" r="22"/>
+              <path d="M270 126 L272 148 L286 138 Z"/>
+              <path d="M298 126 L296 148 L284 138 Z"/>
+            </g>
+            <circle cx="292" cy="146" r="3.4" fill="#ffe9a8"/>
+            <circle cx="278" cy="146" r="3.4" fill="#ffe9a8"/>
+            <circle cx="160" cy="176" r="15" fill="#fff" opacity=".9"/>
+            <path d="M154 168 L166 176 L154 184 Z" fill="#d95c8d"/>
+          </svg>
+          <div class="ofw-mini__body">
+            <h3>《猫与旧书店》</h3>
+            <p>治愈影像系列第一集，全片用一个长镜头完成，记录一只橘猫在书店里度过的整个下午。</p>
+            <div class="ofw-mini__meta"><span>萌宠日常</span><span>09:30</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 热门视频流 ============ -->
+<section class="ofw-section ofw-section--tint ofw-anchor" id="ofw-feed">
+  <div class="ofw-wrap">
+    <div class="ofw-sec-head">
+      <span class="ofw-sec-head__eyebrow">TRENDING NOW</span>
+      <h2>热门视频流：来自社区的真实创作，按你的兴趣筛选</h2>
+      <p>点击标签即可筛选题材，卡片上的数字会随着你的操作实时变化。</p>
+    </div>
+
+    <div class="ofw-filter" id="ofw-filter">
+      <button type="button" class="is-active" data-filter="all">全部</button>
+      <button type="button" data-filter="动画">原创动画</button>
+      <button type="button" data-filter="幕后">创作幕后</button>
+      <button type="button" data-filter="访谈">人物访谈</button>
+      <button type="button" data-filter="城市">城市影像</button>
+      <button type="button" data-filter="治愈">治愈日常</button>
+    </div>
+
+    <div class="ofw-cards" id="ofw-cards">
+      <article class="ofw-card" data-cat="动画">
+        <div class="ofw-thumb">
+          <svg viewBox="0 0 400 225" role="img" aria-label="作品《以樱花为名的夏天》封面，青空与电车轨道透视">
+            <defs>
+              <linearGradient id="ofw-c1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#cfe6ff"/><stop offset="1" stop-color="#ffe6f0"/>
+              </linearGradient>
+            </defs>
+            <rect width="400" height="225" fill="url(#ofw-c1)"/>
+            <circle cx="316" cy="56" r="30" fill="#fff" opacity=".75"/>
+            <path d="M0 158 L400 158 V225 H0 Z" fill="#a9c5a0"/>
+            <path d="M150 225 L182 158 H218 L250 225 Z" fill="#c9bfb0"/>
+            <g stroke="#8e8479" stroke-width="3">
+              <path d="M172 225 L188 158"/><path d="M228 225 L212 158"/>
+            </g>
+            <g fill="#8e8479">
+              <rect x="150" y="112" width="6" height="50"/><rect x="244" y="112" width="6" height="50"/>
+              <rect x="150" y="108" width="100" height="6"/>
+            </g>
+            <g stroke="#6f8a68" stroke-width="2" opacity=".8">
+              <path d="M150 108 L112 86"/><path d="M250 108 L288 86"/>
+            </g>
+            <g fill="#ffb7d0">
+              <circle cx="104" cy="80" r="20"/><circle cx="292" cy="78" r="18"/><circle cx="136" cy="66" r="14"/>
+            </g>
+            <circle cx="200" cy="120" r="17" fill="#fff" opacity=".92"/>
+            <path d="M193 111 L207 120 L193 129 Z" fill="#d95c8d"/>
+          </svg>
+          <span class="ofw-thumb__tag">06:44</span>
+          <div class="ofw-thumb__play"><i></i></div>
+        </div>
+        <div class="ofw-card__body">
+          <h3>《以樱花为名的夏天》正片发布</h3>
+          <p>夏天与樱花本是错位的意象，我们偏要把它们放在同一个画面里，看错位能不能长出新的情绪。</p>
+          <div class="ofw-card__author">
+            <span class="ofw-avatar ofw-avatar--a">林</span>
+            <span>林间早川</span><em>2.1 万播放</em>
+          </div>
+          <div class="ofw-card__acts">
+            <button type="button" class="ofw-act ofw-like">♡ <b>1284</b></button>
+            <button type="button" class="ofw-act ofw-save">☆ 收藏</button>
+            <button type="button" class="ofw-act ofw-act--share ofw-copy">复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ofw-card" data-cat="幕后">
+        <div class="ofw-thumb">
+          <svg viewBox="0 0 400 225" role="img" aria-label="分镜稿与色卡铺满桌面的创作幕后场景">
+            <rect width="400" height="225" fill="#f5eee0"/>
+            <g fill="#fff" stroke="#e2d3bb">
+              <rect x="26" y="30" width="104" height="70" rx="6"/>
+              <rect x="142" y="46" width="88" height="60" rx="6" transform="rotate(-5 186 76)"/>
+              <rect x="248" y="30" width="120" height="72" rx="6" transform="rotate(4 308 66)"/>
+              <rect x="40" y="126" width="92" height="66" rx="6" transform="rotate(3 86 159)"/>
+              <rect x="150" y="130" width="110" height="64" rx="6" transform="rotate(-3 205 162)"/>
+            </g>
+            <g stroke="#c8b49a" stroke-width="2">
+              <path d="M38 52 H118"/><path d="M38 66 H106"/><path d="M38 148 H118"/><path d="M38 162 H100"/>
+              <path d="M160 146 H248"/><path d="M160 160 H230"/>
+            </g>
+            <g fill="#f388b3" opacity=".8"><rect x="266" y="48" width="30" height="20" rx="3"/></g>
+            <g fill="#8a6bbf" opacity=".8"><rect x="304" y="48" width="30" height="20" rx="3"/></g>
+            <g fill="#e8b34b" opacity=".8"><rect x="266" y="76" width="30" height="20" rx="3"/></g>
+            <g fill="#5fb49c" opacity=".8"><rect x="304" y="76" width="30" height="20" rx="3"/></g>
+            <circle cx="316" cy="158" r="18" fill="#fff" opacity=".9"/>
+            <path d="M309 149 L323 158 L309 167 Z" fill="#b98a1f"/>
+          </svg>
+          <span class="ofw-thumb__tag">12:08</span>
+          <div class="ofw-thumb__play"><i></i></div>
+        </div>
+        <div class="ofw-card__body">
+          <h3>四十二张分镜，如何删到二十八张</h3>
+          <p>一次真实的删戏复盘：我们不谈灵感，只谈哪一格必须留下、哪一格留了会毁掉节奏。</p>
+          <div class="ofw-card__author">
+            <span class="ofw-avatar ofw-avatar--b">南</span>
+            <span>南野薰</span><em>1.6 万播放</em>
+          </div>
+          <div class="ofw-card__acts">
+            <button type="button" class="ofw-act ofw-like">♡ <b>962</b></button>
+            <button type="button" class="ofw-act ofw-save">☆ 收藏</button>
+            <button type="button" class="ofw-act ofw-act--share ofw-copy">复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ofw-card" data-cat="访谈">
+        <div class="ofw-thumb">
+          <svg viewBox="0 0 400 225" role="img" aria-label="人物访谈录制现场，两把椅子与环形灯">
+            <rect width="400" height="225" fill="#2f2a3c"/>
+            <circle cx="200" cy="86" r="52" fill="#ffe9f1" opacity=".16"/>
+            <circle cx="200" cy="86" r="34" fill="#ffd7e6" opacity=".3"/>
+            <g fill="#43394f">
+              <rect x="52" y="150" width="86" height="14" rx="6"/>
+              <rect x="262" y="150" width="86" height="14" rx="6"/>
+              <rect x="66" y="112" width="58" height="42" rx="8"/>
+              <rect x="276" y="112" width="58" height="42" rx="8"/>
+            </g>
+            <g fill="#ffb7d0">
+              <circle cx="95" cy="96" r="16"/><circle cx="305" cy="96" r="16"/>
+            </g>
+            <g stroke="#8a6bbf" stroke-width="2" opacity=".6">
+              <path d="M0 190 H400"/><path d="M0 204 H400"/>
+            </g>
+            <circle cx="200" cy="176" r="18" fill="#fff" opacity=".9"/>
+            <path d="M193 167 L207 176 L193 185 Z" fill="#8a6bbf"/>
+          </svg>
+          <span class="ofw-thumb__tag">21:35</span>
+          <div class="ofw-thumb__play"><i></i></div>
+        </div>
+        <div class="ofw-card__body">
+          <h3>专访配音演员陈砚：声音是角色的第二张脸</h3>
+          <p>聊聊她如何用气声处理一场告别戏，以及为什么她坚持在录音棚里站着配完整场戏。</p>
+          <div class="ofw-card__author">
+            <span class="ofw-avatar ofw-avatar--c">砚</span>
+            <span>编辑部访谈组</span><em>3.4 万播放</em>
+          </div>
+          <div class="ofw-card__acts">
+            <button type="button" class="ofw-act ofw-like">♡ <b>2140</b></button>
+            <button type="button" class="ofw-act ofw-save">☆ 收藏</button>
+            <button type="button" class="ofw-act ofw-act--share ofw-copy">复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ofw-card" data-cat="城市">
+        <div class="ofw-thumb">
+          <svg viewBox="0 0 400 225" role="img" aria-label="城市夜景动画封面，霓虹街巷与行人剪影">
+            <defs>
+              <linearGradient id="ofw-c4" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#1c2338"/><stop offset="1" stop-color="#3d2a4e"/>
+              </linearGradient>
+            </defs>
+            <rect width="400" height="225" fill="url(#ofw-c4)"/>
+            <g fill="#2b3350">
+              <rect x="0" y="60" width="62" height="165"/><rect x="70" y="90" width="48" height="135"/>
+              <rect x="126" y="46" width="56" height="179"/><rect x="190" y="80" width="42" height="145"/>
+              <rect x="240" y="34" width="66" height="191"/><rect x="314" y="72" width="86" height="153"/>
+            </g>
+            <g fill="#ffd88a" opacity=".85">
+              <rect x="14" y="80" width="10" height="10"/><rect x="34" y="80" width="10" height="10"/>
+              <rect x="84" y="108" width="10" height="10"/><rect x="104" y="132" width="10" height="10"/>
+              <rect x="142" y="66" width="10" height="10"/><rect x="164" y="96" width="10" height="10"/>
+              <rect x="256" y="54" width="10" height="10"/><rect x="280" y="86" width="10" height="10"/>
+              <rect x="332" y="92" width="10" height="10"/><rect x="358" y="124" width="10" height="10"/>
+            </g>
+            <g fill="#f388b3" opacity=".9">
+              <rect x="252" y="180" width="42" height="8" rx="4"/>
+              <rect x="200" y="170" width="30" height="6" rx="3"/>
+            </g>
+            <g fill="#0f1422">
+              <circle cx="150" cy="188" r="9"/><rect x="143" y="196" width="14" height="26" rx="6"/>
+              <circle cx="230" cy="196" r="8"/><rect x="224" y="203" width="12" height="22" rx="5"/>
+            </g>
+            <circle cx="200" cy="112" r="17" fill="#fff" opacity=".92"/>
+            <path d="M193 103 L207 112 L193 121 Z" fill="#d95c8d"/>
+          </svg>
+          <span class="ofw-thumb__tag">15:02</span>
+          <div class="ofw-thumb__play"><i></i></div>
+        </div>
+        <div class="ofw-card__body">
+          <h3>《夜行三公里》：把城市画成一条会呼吸的线</h3>
+          <p>从便利店到天桥，三个地标串起一个人的夜班路线，用建筑透视变化代替情绪起伏。</p>
+          <div class="ofw-card__author">
+            <span class="ofw-avatar ofw-avatar--d">周</span>
+            <span>周回航</span><em>1.9 万播放</em>
+          </div>
+          <div class="ofw-card__acts">
+            <button type="button" class="ofw-act ofw-like">♡ <b>1130</b></button>
+            <button type="button" class="ofw-act ofw-save">☆ 收藏</button>
+            <button type="button" class="ofw-act ofw-act--share ofw-copy">复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ofw-card" data-cat="治愈">
+        <div class="ofw-thumb">
+          <svg viewBox="0 0 400 225" role="img" aria-label="治愈影像封面，窗台植物与午后光斑">
+            <rect width="400" height="225" fill="#fdf6e6"/>
+            <rect x="0" y="0" width="150" height="225" fill="#f4e6c9"/>
+            <rect x="150" y="0" width="8" height="225" fill="#e6d3ae"/>
+            <g fill="#cde3c5">
+              <ellipse cx="216" cy="132" rx="26" ry="46"/>
+              <ellipse cx="252" cy="118" rx="20" ry="38" transform="rotate(18 252 118)"/>
+              <ellipse cx="188" cy="146" rx="18" ry="32" transform="rotate(-16 188 146)"/>
+            </g>
+            <path d="M232 176 L236 106 L250 106 L254 176 Z" fill="#e0a76f"/>
+            <rect x="196" y="176" width="86" height="12" rx="5" fill="#cf9257"/>
+            <g fill="#ffe9b8" opacity=".85">
+              <circle cx="316" cy="62" r="26"/><circle cx="344" cy="96" r="16"/><circle cx="292" cy="88" r="14"/>
+            </g>
+            <g stroke="#e6d3ae" stroke-width="3"><path d="M270 0 V225"/></g>
+            <circle cx="330" cy="160" r="17" fill="#fff" opacity=".9"/>
+            <path d="M323 151 L337 160 L323 169 Z" fill="#b98a1f"/>
+          </svg>
+          <span class="ofw-thumb__tag">07:19</span>
+          <div class="ofw-thumb__play"><i></i></div>
+        </div>
+        <div class="ofw-card__body">
+          <h3>给阳台拍一支短片：15 分钟自然光练习</h3>
+          <p>没有设备也能完成的光影练习，重点是观察光怎么爬过叶脉，而不是追求画面多漂亮。</p>
+          <div class="ofw-card__author">
+            <span class="ofw-avatar ofw-avatar--e">许</span>
+            <span>许晴川</span><em>2.7 万播放</em>
+          </div>
+          <div class="ofw-card__acts">
+            <button type="button" class="ofw-act ofw-like">♡ <b>1720</b></button>
+            <button type="button" class="ofw-act ofw-save">☆ 收藏</button>
+            <button type="button" class="ofw-act ofw-act--share ofw-copy">复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ofw-card" data-cat="动画">
+        <div class="ofw-thumb">
+          <svg viewBox="0 0 400 225" role="img" aria-label="科幻动画封面，漂浮的几何方块与星轨">
+            <defs>
+              <linearGradient id="ofw-c6" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#1a1a2e"/><stop offset="1" stop-color="#3b2a55"/>
+              </linearGradient>
+            </defs>
+            <rect width="400" height="225" fill="url(#ofw-c6)"/>
+            <g fill="#fff" opacity=".7">
+              <circle cx="42" cy="40" r="1.8"/><circle cx="88" cy="72" r="1.4"/><circle cx="132" cy="34" r="2"/>
+              <circle cx="210" cy="52" r="1.6"/><circle cx="284" cy="28" r="1.8"/><circle cx="342" cy="62" r="1.4"/>
+              <circle cx="60" cy="150" r="1.6"/><circle cx="356" cy="180" r="2"/><circle cx="300" cy="140" r="1.4"/>
+            </g>
+            <g stroke="#8a6bbf" stroke-width="1.6" fill="none" opacity=".6">
+              <ellipse cx="200" cy="120" rx="150" ry="52" transform="rotate(-14 200 120)"/>
+              <ellipse cx="200" cy="120" rx="110" ry="38" transform="rotate(18 200 120)"/>
+            </g>
+            <g fill="#f388b3" opacity=".92">
+              <rect x="168" y="88" width="34" height="34" rx="6" transform="rotate(18 185 105)"/>
+            </g>
+            <g fill="#6fa8dc" opacity=".9">
+              <rect x="238" y="118" width="24" height="24" rx="5" transform="rotate(-14 250 130)"/>
+              <rect x="120" y="126" width="18" height="18" rx="4" transform="rotate(26 129 135)"/>
+            </g>
+            <circle cx="200" cy="112" r="17" fill="#fff" opacity=".92"/>
+            <path d="M193 103 L207 112 L193 121 Z" fill="#8a6bbf"/>
+          </svg>
+          <span class="ofw-thumb__tag">10:48</span>
+          <div class="ofw-thumb__play"><i></i></div>
+        </div>
+        <div class="ofw-card__body">
+          <h3>《折叠引力》：用几何体讲一次告别</h3>
+          <p>零台词科幻短片，靠方块之间的靠近与远离完成全部叙事，配乐使用合成器现场录制。</p>
+          <div class="ofw-card__author">
+            <span class="ofw-avatar ofw-avatar--f">陆</span>
+            <span>陆衍之</span><em>4.2 万播放</em>
+          </div>
+          <div class="ofw-card__acts">
+            <button type="button" class="ofw-act ofw-like">♡ <b>3062</b></button>
+            <button type="button" class="ofw-act ofw-save">☆ 收藏</button>
+            <button type="button" class="ofw-act ofw-act--share ofw-copy">复制链接</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 专题企划 ============ -->
+<section class="ofw-section ofw-anchor" id="ofw-topics">
+  <div class="ofw-wrap">
+    <div class="ofw-sec-head">
+      <span class="ofw-sec-head__eyebrow">SPECIAL PROJECTS</span>
+      <h2>专题企划：把零散的作品，编成可以被阅读的章节</h2>
+      <p>每个专题由品牌编辑部牵头，联合多位创作者共同完成，更新状态与进度在官网同步公示。</p>
+    </div>
+
+    <div class="ofw-topics">
+      <article class="ofw-topic">
+        <div class="ofw-topic__bg">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="专题《樱花下的分镜》封面，粉色花瓣与分镜格">
+            <rect width="400" height="300" fill="#3a2c47"/>
+            <g fill="#5b3f63"><rect x="20" y="20" width="110" height="76" rx="8"/><rect x="144" y="20" width="110" height="76" rx="8"/><rect x="268" y="20" width="110" height="76" rx="8"/></g>
+            <g fill="#f388b3" opacity=".9">
+              <circle cx="86" cy="196" r="36"/><circle cx="148" cy="228" r="26"/><circle cx="300" cy="206" r="42"/>
+              <circle cx="246" cy="168" r="20"/><circle cx="352" cy="250" r="22"/>
+            </g>
+            <g fill="#ffd7e6" opacity=".85">
+              <circle cx="86" cy="196" r="18"/><circle cx="300" cy="206" r="20"/><circle cx="148" cy="228" r="12"/>
+            </g>
+            <g stroke="#8a6bbf" stroke-width="2" opacity=".7"><path d="M0 276 H400"/></g>
+          </svg>
+        </div>
+        <span class="ofw-topic__state">更新中 · 已上线 9/12</span>
+        <h3>樱花下的分镜</h3>
+        <p>十二位创作者，同一棵樱花树。每人交出一格关键分镜，拼成一条跨越四季的完整叙事线。</p>
+        <div class="ofw-topic__foot"><span>参与 12 位</span><span>总时长 96 分钟</span></div>
+      </article>
+
+      <article class="ofw-topic">
+        <div class="ofw-topic__bg">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="专题《声音的第二张脸》封面，声波与麦克风">
+            <rect width="400" height="300" fill="#1f2a3c"/>
+            <g stroke="#6fa8dc" stroke-width="3" opacity=".85" fill="none">
+              <path d="M20 150 Q60 90 100 150 T180 150 T260 150 T340 150 T400 150" transform="translate(0,0)"/>
+              <path d="M20 190 Q60 130 100 190 T180 190 T260 190 T340 190 T400 190"/>
+              <path d="M20 110 Q60 50 100 110 T180 110 T260 110 T340 110 T400 110"/>
+            </g>
+            <g fill="#ffd7e6"><circle cx="200" cy="72" r="26"/></g>
+            <rect x="188" y="96" width="24" height="60" rx="12" fill="#f388b3"/>
+            <rect x="150" y="156" width="100" height="12" rx="6" fill="#8a6bbf"/>
+            <rect x="196" y="168" width="8" height="52" fill="#8a6bbf"/>
+            <rect x="150" y="220" width="100" height="10" rx="5" fill="#5b3f63"/>
+          </svg>
+        </div>
+        <span class="ofw-topic__state">已完结 · 共 6 期</span>
+        <h3>声音的第二张脸</h3>
+        <p>聚焦配音与音效设计，拆解六部短片的声音结构，附原始工程文件与收音现场记录。</p>
+        <div class="ofw-topic__foot"><span>参与 8 位</span><span>总时长 128 分钟</span></div>
+      </article>
+
+      <article class="ofw-topic">
+        <div class="ofw-topic__bg">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="专题《城市里的一百个转角》封面，街道转角与路牌">
+            <rect width="400" height="300" fill="#dbe9f2"/>
+            <path d="M0 220 L400 190 V300 H0 Z" fill="#9fb6cf"/>
+            <g fill="#7d97b5"><rect x="0" y="60" width="70" height="160"/><rect x="86" y="96" width="54" height="124"/><rect x="300" y="70" width="100" height="150"/></g>
+            <g fill="#ffe9b8" opacity=".9">
+              <rect x="12" y="80" width="12" height="12"/><rect x="40" y="80" width="12" height="12"/>
+              <rect x="96" y="116" width="12" height="12"/><rect x="318" y="92" width="12" height="12"/><rect x="352" y="120" width="12" height="12"/>
+            </g>
+            <rect x="176" y="120" width="8" height="100" fill="#5b4a3a"/>
+            <rect x="146" y="98" width="68" height="30" rx="6" fill="#f388b3"/>
+            <ellipse cx="216" cy="252" rx="60" ry="14" fill="#7d97b5" opacity=".6"/>
+            <circle cx="250" cy="60" r="22" fill="#fff" opacity=".75"/>
+          </svg>
+        </div>
+        <span class="ofw-topic__state">报名中 · 截止 12/18</span>
+        <h3>城市里的一百个转角</h3>
+        <p>面向所有创作者的在地影像征集，用十五秒动画描述你所在城市的一个转角，入选作品将进入年度合辑。</p>
+        <div class="ofw-topic__foot"><span>已收稿 63 份</span><span>评审 5 人</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 创作者矩阵 ============ -->
+<section class="ofw-section ofw-section--tint ofw-anchor" id="ofw-creators">
+  <div class="ofw-wrap">
+    <div class="ofw-sec-head">
+      <span class="ofw-sec-head__eyebrow">CREATORS</span>
+      <h2>创作者矩阵：每一位都值得被认真介绍</h2>
+      <p>点击头像可查看完整档案与作品年表，他们的创作方向，构成了 overflow动漫免费樱花的内容底色。</p>
+    </div>
+
+    <div class="ofw-creators">
+      <article class="ofw-creator">
+        <div class="ofw-creator__avatar ofw-avatar--a" data-creator="林间早川">林</div>
+        <h3>林间早川</h3>
+        <div class="ofw-creator__field">原创动画 / 情感叙事</div>
+        <p>擅长用季节变化承载情绪，作品节奏偏慢，坚持手绘底稿，认为「留白比信息更贵」。</p>
+        <div class="ofw-creator__stats"><span><b>84</b> 作品</span><span><b>12.6万</b> 粉丝</span></div>
+        <button type="button" class="ofw-btn ofw-btn--ghost ofw-btn--small ofw-profile" data-name="林间早川">查看档案</button>
+      </article>
+
+      <article class="ofw-creator">
+        <div class="ofw-creator__avatar ofw-avatar--b" data-creator="南野薰">南</div>
+        <h3>南野薰</h3>
+        <div class="ofw-creator__field">分镜设计 / 创作幕后</div>
+        <p>分镜师出身，喜欢把删戏过程公开，作品常配有完整分镜对照表，是新人最常请教的作者之一。</p>
+        <div class="ofw-creator__stats"><span><b>62</b> 作品</span><span><b>9.3万</b> 粉丝</span></div>
+        <button type="button" class="ofw-btn ofw-btn--ghost ofw-btn--small ofw-profile" data-name="南野薰">查看档案</button>
+      </article>
+
+      <article class="ofw-creator">
+        <div class="ofw-creator__avatar ofw-avatar--d" data-creator="周回航">周</div>
+        <h3>周回航</h3>
+        <div class="ofw-creator__field">城市影像 / 建筑透视</div>
+        <p>建筑学背景，专注把城市空间转译为动画语言，作品常出现长镜头与几何构图，冷静但不冷漠。</p>
+        <div class="ofw-creator__stats"><span><b>47</b> 作品</span><span><b>7.1万</b> 粉丝</span></div>
+        <button type="button" class="ofw-btn ofw-btn--ghost ofw-btn--small ofw-profile" data-name="周回航">查看档案</button>
+      </article>
+
+      <article class="ofw-creator">
+        <div class="ofw-creator__avatar ofw-avatar--e" data-creator="许晴川">许</div>
+        <h3>许晴川</h3>
+        <div class="ofw-creator__field">治愈日常 / 自然光练习</div>
+        <p>坚持「小成本也能拍好片」，作品多为单场景短片，擅长用光斑、风与呼吸感制造温度。</p>
+        <div class="ofw-creator__stats"><span><b>96</b> 作品</span><span><b>15.2万</b> 粉丝</span></div>
+        <button type="button" class="ofw-btn ofw-btn--ghost ofw-btn--small ofw-profile" data-name="许晴川">查看档案</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 影像墙 ============ -->
+<section class="ofw-section ofw-anchor" id="ofw-wall">
+  <div class="ofw-wrap">
+    <div class="ofw-sec-head">
+      <span class="ofw-sec-head__eyebrow">IMAGE WALL</span>
+      <h2>影像墙：社区近期上传的单帧作品</h2>
+      <p>尺寸与构图各不相同，我们不追求统一，只在意每一格是否站得住。</p>
+    </div>
+
+    <div class="ofw-wall">
+      <div class="ofw-wall__item ofw-wall__item--big">
+        <svg viewBox="0 0 480 480" role="img" aria-label="影像墙大图：黄昏樱花树下的人物剪影">
+          <defs>
+            <linearGradient id="ofw-w1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffd9a8"/><stop offset=".6" stop-color="#ffb7d0"/><stop offset="1" stop-color="#a77bc0"/>
+            </linearGradient>
+          </defs>
+          <rect width="480" height="480" fill="url(#ofw-w1)"/>
+          <circle cx="240" cy="230" r="86" fill="#fff2d0" opacity=".8"/>
+          <path d="M0 380 Q120 320 240 366 T480 360 V480 H0 Z" fill="#7d5a8a"/>
+          <path d="M0 416 Q160 372 300 406 T480 400 V480 H0 Z" fill="#5c3f63"/>
+          <path d="M300 480c-8-98 4-168 22-232 10-34 28-52 48-56-16 26-22 50-18 76 5 42 2 104-6 212z" fill="#3a2c47"/>
+          <g fill="#ffc9dc">
+            <circle cx="386" cy="176" r="64"/><circle cx="432" cy="220" r="46"/><circle cx="326" cy="212" r="50"/>
+            <circle cx="358" cy="142" r="38"/><circle cx="410" cy="150" r="30"/>
+          </g>
+          <g fill="#f388b3" opacity=".85">
+            <ellipse cx="120" cy="150" rx="8" ry="5" transform="rotate(-18 120 150)"/>
+            <ellipse cx="188" cy="204" rx="7" ry="4.4" transform="rotate(22 188 204)"/>
+            <ellipse cx="96" cy="268" rx="8" ry="5" transform="rotate(-6 96 268)"/>
+            <ellipse cx="216" cy="112" rx="6" ry="4" transform="rotate(14 216 112)"/>
+          </g>
+        </svg>
+        <div class="ofw-wall__cap"><b>《春分之后》单帧</b>作者：林间早川 · 色彩设计手稿</div>
+      </div>
+
+      <div class="ofw-wall__item">
+        <svg viewBox="0 0 240 240" role="img" aria-label="影像墙：雨滴落在窗玻璃上的特写">
+          <rect width="240" height="240" fill="#cfdde8"/>
+          <g fill="#e8f1f8" opacity=".9">
+            <circle cx="60" cy="70" r="12"/><circle cx="112" cy="120" r="9"/><circle cx="170" cy="60" r="14"/>
+            <circle cx="86" cy="170" r="11"/><circle cx="150" cy="186" r="8"/><circle cx="200" cy="140" r="10"/>
+          </g>
+          <g fill="#a9c2d4">
+            <circle cx="60" cy="70" r="5"/><circle cx="112" cy="120" r="4"/><circle cx="170" cy="60" r="6"/>
+            <circle cx="86" cy="170" r="4.5"/><circle cx="150" cy="186" r="3.5"/><circle cx="200" cy="140" r="4"/>
+          </g>
+          <g stroke="#bcd2e0" stroke-width="2"><path d="M0 206 H240"/><path d="M0 30 H240"/></g>
+        </svg>
+        <div class="ofw-wall__cap"><b>雨窗</b>作者：周回航</div>
+      </div>
+
+      <div class="ofw-wall__item">
+        <svg viewBox="0 0 240 240" role="img" aria-label="影像墙：暖色台灯下的手绘草稿纸">
+          <rect width="240" height="240" fill="#f6ecd8"/>
+          <rect x="40" y="60" width="160" height="120" rx="6" fill="#fff"/>
+          <g stroke="#cbb89c" stroke-width="2">
+            <path d="M56 86 H184"/><path d="M56 104 H160"/><path d="M56 122 H176"/><path d="M56 140 H140"/>
+          </g>
+          <path d="M148 44 L172 44 L162 84 L158 84 Z" fill="#d9a94a"/>
+          <circle cx="160" cy="84" r="16" fill="#ffe9b8"/>
+          <rect x="40" y="180" width="160" height="8" rx="4" fill="#e8d6b8"/>
+        </svg>
+        <div class="ofw-wall__cap"><b>夜稿</b>作者：南野薰</div>
+      </div>
+
+      <div class="ofw-wall__item">
+        <svg viewBox="0 0 240 240" role="img" aria-label="影像墙：清晨窗台的绿植剪影">
+          <rect width="240" height="240" fill="#e6f0e2"/>
+          <rect x="0" y="0" width="120" height="240" fill="#d6e6d0"/>
+          <rect x="120" y="0" width="6" height="240" fill="#c2d8bb"/>
+          <g fill="#8fbf87">
+            <ellipse cx="168" cy="136" rx="24" ry="44"/>
+            <ellipse cx="198" cy="122" rx="18" ry="34" transform="rotate(20 198 122)"/>
+            <ellipse cx="142" cy="150" rx="16" ry="28" transform="rotate(-18 142 150)"/>
+          </g>
+          <path d="M180 184 L184 112 L198 112 L202 184 Z" fill="#c98f5c"/>
+          <circle cx="60" cy="70" r="26" fill="#fff" opacity=".8"/>
+        </svg>
+        <div class="ofw-wall__cap"><b>晨光植物</b>作者：许晴川</div>
+      </div>
+
+      <div class="ofw-wall__item">
+        <svg viewBox="0 0 240 240" role="img" aria-label="影像墙：星空下的帐篷与远山">
+          <rect width="240" height="240" fill="#1e2438"/>
+          <g fill="#fff" opacity=".8">
+            <circle cx="40" cy="44" r="2"/><circle cx="90" cy="28" r="1.6"/><circle cx="150" cy="52" r="2.2"/>
+            <circle cx="200" cy="32" r="1.6"/><circle cx="64" cy="90" r="1.4"/><circle cx="182" cy="96" r="1.8"/>
+          </g>
+          <path d="M0 160 L70 108 L132 152 L196 96 L240 132 V240 H0 Z" fill="#2f3a55"/>
+          <path d="M0 190 L240 176 V240 H0 Z" fill="#3a2c47"/>
+          <path d="M96 210 L124 158 L152 210 Z" fill="#e8b34b"/>
+          <path d="M124 210 L124 174 L136 196 Z" fill="#b98a1f"/>
+        </svg>
+        <div class="ofw-wall__cap"><b>露营夜话</b>作者：陆衍之</div>
+      </div>
+
+      <div class="ofw-wall__item">
+        <svg viewBox="0 0 240 240" role="img" aria-label="影像墙：老式放映机的红色光柱">
+          <rect width="240" height="240" fill="#241b2c"/>
+          <circle cx="60" cy="120" r="30" fill="#3a2c47"/>
+          <circle cx="60" cy="120" r="16" fill="#5b3f63"/>
+          <path d="M84 108 L220 66 L220 174 L84 132 Z" fill="#f388b3" opacity=".32"/>
+          <path d="M84 112 L220 78 L220 162 L84 128 Z" fill="#ffd7e6" opacity=".22"/>
+          <rect x="34" y="86" width="20" height="68" rx="6" fill="#4d3a5c"/>
+          <g fill="#ffb7d0"><circle cx="180" cy="106" r="3"/><circle cx="200" cy="124" r="2.4"/><circle cx="160" cy="132" r="2"/></g>
+        </svg>
+        <div class="ofw-wall__cap"><b>放映之夜</b>作者：陈砚</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 用户评价 + 榜单 ============ -->
+<section class="ofw-section ofw-section--tint ofw-anchor" id="ofw-voices">
+  <div class="ofw-wrap">
+    <div class="ofw-sec-head">
+      <span class="ofw-sec-head__eyebrow">COMMUNITY VOICES</span>
+      <h2>用户评价与本周榜单：口碑来自具体的观看体验</h2>
+      <p>我们保留了不同长度、不同角度的声音，包括那些并不完美的评价。</p>
+    </div>
+
+    <div class="ofw-reviews" style="margin-bottom:42px">
+      <article class="ofw-review">
+        <div class="ofw-review__top">
+          <span class="ofw-avatar ofw-avatar--a">阿</span><b>阿澈不熬夜</b><span>3 天前</span>
+        </div>
+        <p>《花期七日》里那场雨的音效做得太细了，戴耳机能听到远处电车的刹车声。这种细节在别的平台很难遇到，官网的母版确实更清楚。</p>
+        <div class="ofw-review__stars">★★★★★</div>
+      </article>
+
+      <article class="ofw-review">
+        <div class="ofw-review__top">
+          <span class="ofw-avatar ofw-avatar--b">小</span><b>小满July</b><span>5 天前</span>
+        </div>
+        <p>整体内容质量很高，但专题更新速度有点慢，等《樱花下的分镜》最后三集等了快一个月。希望官网能加一个更新提醒功能。</p>
+        <div class="ofw-review__stars">★★★★☆</div>
+      </article>
+
+      <article class="ofw-review">
+        <div class="ofw-review__top">
+          <span class="ofw-avatar ofw-avatar--d">路</span><b>路过的一只鹿</b><span>1 周前</span>
+        </div>
+        <p>投稿流程比想象中顺畅，编辑部给了很具体的修改意见，不是那种模板化的回复。作为新人，第一次感到被认真对待。</p>
+        <div class="ofw-review__stars">★★★★★</div>
+      </article>
+
+      <article class="ofw-review">
+        <div class="ofw-review__top">
+          <span class="ofw-avatar ofw-avatar--c">沉</span><b>沉舟侧畔</b><span>1 周前</span>
+        </div>
+        <p>喜欢南野薰的分镜拆解，比看十篇教程都有用。唯一建议是希望加上分镜文件的高清下载，现在截图有点糊。</p>
+        <div class="ofw-review__stars">★★★★☆</div>
+      </article>
+
+      <article class="ofw-review">
+        <div class="ofw-review__top">
+          <span class="ofw-avatar ofw-avatar--e">柠</span><b>柠檬气泡水</b><span>2 周前</span>
+        </div>
+        <p>影像墙是我每周都会来的地方，像翻一本不知道下一页是什么的册子。有一张雨窗我存下来当壁纸了，希望作者多更新。</p>
+        <div class="ofw-review__stars">★★★★★</div>
+      </article>
+
+      <article class="ofw-review">
+        <div class="ofw-review__top">
+          <span class="ofw-avatar ofw-avatar--f">老</span><b>老周看电影</b><span>2 周前</span>
+        </div>
+        <p>作为一个看了二十多年动画的人，这里的作品还比较青涩，但胜在真诚。制作规范清楚、版权信息透明，这点很值得肯定。</p>
+        <div class="ofw-review__stars">★★★★☆</div>
+      </article>
+    </div>
+
+    <div class="ofw-board">
+      <div class="ofw-board__panel">
+        <h3>本周热度榜</h3>
+        <div class="ofw-rank">
+          <span class="ofw-rank__no">1</span>
+          <span class="ofw-rank__title">《折叠引力》<small>陆衍之 · 科幻原创</small></span>
+          <span class="ofw-rank__val">4.2万</span>
+        </div>
+        <div class="ofw-rank">
+          <span class="ofw-rank__no">2</span>
+          <span class="ofw-rank__title">专访配音演员陈砚<small>编辑部访谈组</small></span>
+          <span class="ofw-rank__val">3.4万</span>
+        </div>
+        <div class="ofw-rank">
+          <span class="ofw-rank__no">3</span>
+          <span class="ofw-rank__title">《花期七日》<small>林间早川 · 情感叙事</small></span>
+          <span class="ofw-rank__val">2.9万</span>
+        </div>
+        <div class="ofw-rank">
+          <span class="ofw-rank__no">4</span>
+          <span class="ofw-rank__title">给阳台拍一支短片<small>许晴川 · 自然光练习</small></span>
+          <span class="ofw-rank__val">2.7万</span>
+        </div>
+      </div>
+
+      <div class="ofw-board__panel">
+        <h3>新人榜 · 十一月</h3>
+        <div class="ofw-rank">
+          <span class="ofw-rank__no">1</span>
+          <span class="ofw-rank__title">叶知秋<small>定格动画 · 首作《玻璃罐》</small></span>
+          <span class="ofw-rank__val">+860</span>
+        </div>
+        <div class="ofw-rank">
+          <span class="ofw-rank__no">2</span>
+          <span class="ofw-rank__title">半格光<small>城市速写 · 晨间系列</small></span>
+          <span class="ofw-rank__val">+742</span>
+        </div>
+        <div class="ofw-rank">
+          <span class="ofw-rank__no">3</span>
+          <span class="ofw-rank__title">林野<small>音效设计 · 雨天声景</small></span>
+          <span class="ofw-rank__val">+615</span>
+        </div>
+        <div class="ofw-rank">
+          <span class="ofw-rank__no">4</span>
+          <span class="ofw-rank__title">小满工作室<small>双人合作 · 分镜实验</small></span>
+          <span class="ofw-rank__val">+528</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 企业动态 ============ -->
+<section class="ofw-section ofw-anchor" id="ofw-news">
+  <div class="ofw-wrap">
+    <div class="ofw-sec-head">
+      <span class="ofw-sec-head__eyebrow">BRAND UPDATE</span>
+      <h2>企业动态：品牌与平台的官方发布</h2>
+      <p>关于 overflow动漫免费樱花 的运营进展、合作与内容更新，都会在这里同步。</p>
+    </div>
+
+    <div class="ofw-news">
+      <article class="ofw-news__item">
+        <div class="ofw-news__date">2026.11.16</div>
+        <div>
+          <h3>创作者扶持计划第四期启动，开放 30 个扶持名额</h3>
+          <p>面向首次投稿的原创作者，提供分镜诊断、成片调色与宣发资源支持，报名截止 12 月 18 日。</p>
+        </div>
+        <button type="button" class="ofw-btn ofw-btn--ghost ofw-btn--small ofw-apply">报名</button>
+      </article>
+
+      <article class="ofw-news__item">
+        <div class="ofw-news__date">2026.11.08</div>
+        <div>
+          <h3>官网影像母版库完成升级，支持多码率自适应</h3>
+          <p>本次升级覆盖全部 1860 部作品，画面分层与字幕校对同步更新，观看体验更稳定。</p>
+        </div>
+        <button type="button" class="ofw-btn ofw-btn--ghost ofw-btn--small ofw-apply">了解详情</button>
+      </article>
+
+      <article class="ofw-news__item">
+        <div class="ofw-news__date">2026.10.29</div>
+        <div>
+          <h3>与三所高校动画专业共建实践基地</h3>
+          <p>品牌将提供真实企划项目与创作导师，学生作品经评审后可进入官网专题展映。</p>
+        </div>
+        <button type="button" class="ofw-btn ofw-btn--ghost ofw-btn--small ofw-apply">查看合作</button>
+      </article>
+
+      <article class="ofw-news__item">
+        <div class="ofw-news__date">2026.10.12</div>
+        <div>
+          <h3>社区公约更新：明确署名规范与二次创作边界</h3>
+          <p>新版本补充了搬运、二创与商用授权的具体条款，用户可在帮助中心查看完整说明。</p>
+        </div>
+        <button type="button" class="ofw-btn ofw-btn--ghost ofw-btn--small ofw-apply">阅读公约</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ + 联系投稿 ============ -->
+<section class="ofw-section ofw-anchor" id="ofw-faq">
+  <div class="ofw-wrap">
+    <div class="ofw-sec-head">
+      <span class="ofw-sec-head__eyebrow">HELP CENTER</span>
+      <h2>常见问题：关于内容、投稿与品牌合作</h2>
+      <p>如果这里没有你要的答案，欢迎通过页面下方的联系入口与我们沟通。</p>
+    </div>
+
+    <div class="ofw-faq">
+      <details open>
+        <summary>overflow动漫免费樱花 是一个什么样的平台？</summary>
+        <p>overflow动漫免费樱花 是一个专注动漫影像的品牌官方网站，主要内容为原创动画短片、创作幕后、人物访谈与城市影像。平台由品牌方自主运营，所有上线作品均与创作者签署授权，强调正版、高清与可溯源。</p>
+      </details>
+      <details>
+        <summary>我不是专业创作者，可以投稿吗？</summary>
+        <p>可以。我们设有新人扶持通道，对设备与经验没有硬性要求，更看重作品是否有一个真诚的表达内核。首次投稿请在联系入口提交作品链接与 200 字以内的创作说明，编辑部通常会在 7 个工作日内回复。</p>
+      </details>
+      <details>
+        <summary>作品审核大概需要多久？</summary>
+        <p>常规审核为 5 至 10 个工作日，涉及分镜评审的专题投稿会稍长，约 15 个工作日。若作品需要修改，我们会给出具体的意见条目，而不是简单退回。</p>
+      </details>
+      <details>
+        <summary>作品版权归谁？平台会二次使用吗？</summary>
+        <p>版权归创作者所有。平台仅在获得明确授权的前提下进行展示与专题推荐，任何商业用途都会另行签署协议，并提前告知创作者。署名信息会以创作者指定的方式标注。</p>
+      </details>
+      <details>
+        <summary>品牌或机构如何与你们合作？</summary>
+        <p>我们开放联合企划、专题冠名与内容共创三类合作方式。请在联系入口注明机构名称与合作方向，商务团队会提供完整的合作说明与流程文档。</p>
+      </details>
+      <details>
+        <summary>如何反馈问题或举报不当内容？</summary>
+        <p>每张作品卡片都提供反馈入口，也可以直接通过联系邮箱提交。我们承诺在 48 小时内完成初步核查，并将处理结果反馈给提交者。</p>
+      </details>
+      <details>
+        <summary>官网是否提供作品下载？</summary>
+        <p>部分专题会随企划发布分镜表、色卡与音效素材包，供学习用途下载，具体以各专题页的说明为准。成片母版不对外提供下载。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 投稿 / 联系 ============ -->
+<section class="ofw-section ofw-anchor" id="ofw-join">
+  <div class="ofw-wrap">
+    <div class="ofw-join">
+      <div>
+        <span class="ofw-sec-head__eyebrow">JOIN THE STUDIO</span>
+        <h2>带着你的作品来，我们一起把它做完</h2>
+        <p>无论你手上是一个完整的分镜，还是一段只有三秒的灵感，overflow动漫免费樱花 都愿意听你说完。品牌官网长期开放投稿、合作与反馈通道，每一条留言都会被真实的人读到。</p>
+        <div class="ofw-join__actions">
+          <button type="button" class="ofw-btn ofw-btn--primary" id="ofw-open-submit">提交投稿</button>
+          <button type="button" class="ofw-btn ofw-btn--ghost" id="ofw-open-report">反馈与举报</button>
+          <button type="button" class="ofw-btn ofw-btn--ghost ofw-copy">复制官网链接</button>
+        </div>
+      </div>
+      <div class="ofw-join__list">
+        <div class="ofw-join__row"><b>投稿邮箱</b>studio@sakura-overflow.example</div>
+        <div class="ofw-join__row"><b>商务合作</b>brand@sakura-overflow.example</div>
+        <div class="ofw-join__row"><b>办公地址</b>春屿市樱町 12 号影像工坊 3 层</div>
+        <div class="ofw-join__row"><b>回复时间</b>工作日 10:00–18:00，48 小时内响应</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 页脚 ============ -->
+<footer class="ofw-footer">
+  <div class="ofw-wrap">
+    <div class="ofw-footer__grid">
+      <div>
+        <div class="ofw-footer__brand">
+          <span class="ofw-logo__mark">樱</span>
+          <b>overflow动漫免费樱花</b>
+        </div>
+        <p>overflow动漫免费樱花 官方网站 · 品牌自营动漫影像内容生态。我们持续运营原创企划、创作者扶持与社区共创，致力于为行业提供值得信赖的内容样本。</p>
+      </div>
+      <div>
+        <h4>内容板块</h4>
+        <ul>
+          <li><a href="#ofw-focus">焦点影像</a></li>
+          <li><a href="#ofw-feed">热门视频流</a></li>
+          <li><a href="#ofw-topics">专题企划</a></li>
+          <li><a href="#ofw-wall">影像墙</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于品牌</h4>
+        <ul>
+          <li><a href="#ofw-about">品牌故事</a></li>
+          <li><a href="#ofw-creators">创作者矩阵</a></li>
+          <li><a href="#ofw-news">企业动态</a></li>
+          <li><a href="#ofw-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与共建</h4>
+        <ul>
+          <li><a href="#ofw-join">投稿入口</a></li>
+          <li><a href="#ofw-join">商务合作</a></li>
+          <li><a href="#ofw-join">反馈与举报</a></li>
+          <li><a href="#ofw-voices">社区评价</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ofw-footer__bottom">
+      <span>© 2026 overflow动漫免费樱花 官方网站 · 版权所有 · 持续运营中</span>
+      <span>品牌备案：樱ICP备 2026001188 号 · 内容授权查询请通过投稿邮箱联系</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ 弹窗与提示 ============ -->
+<div class="ofw-modal" id="ofw-modal" role="dialog" aria-modal="true" aria-labelledby="ofw-modal-title">
+  <div class="ofw-modal__box">
+    <button type="button" class="ofw-modal__close" id="ofw-modal-close" aria-label="关闭">×</button>
+    <h3 id="ofw-modal-title">提交投稿</h3>
+    <p id="ofw-modal-desc">填写作品基本信息，我们会在 7 个工作日内回复。请确保作品为本人原创。</p>
+    <div class="ofw-modal__field">
+      <label for="ofw-form-name">你的昵称</label>
+      <input type="text" id="ofw-form-name" placeholder="例如：林间早川">
+    </div>
+    <div class="ofw-modal__field">
+      <label for="ofw-form-contact">联系方式</label>
+      <input type="text" id="ofw-form-contact" placeholder="邮箱或常用社交账号">
+    </div>
+    <div class="ofw-modal__field">
+      <label for="ofw-form-note">作品说明</label>
+      <textarea id="ofw-form-note" rows="3" placeholder="简要说明作品类型、时长与创作背景"></textarea>
+    </div>
+    <button type="button" class="ofw-btn ofw-btn--primary" id="ofw-form-send" style="width:100%;justify-content:center">确认提交</button>
+  </div>
+</div>
+
+<div class="ofw-toast" id="ofw-toast" role="status" aria-live="polite"></div>
+<button class="ofw-top" id="ofw-top" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = document.getElementById('ofw-burger');
+  var nav = document.getElementById('ofw-nav');
+  if(burger && nav){
+    burger.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){ nav.classList.remove('is-open'); burger.setAttribute('aria-expanded','false'); }
+    });
+  }
+
+  /* ---------- Toast ---------- */
+  var toastEl = document.getElementById('ofw-toast');
+  var toastTimer = null;
+  function toast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2200);
+  }
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchInput = document.getElementById('ofw-search-input');
+  var searchBtn = document.getElementById('ofw-search-btn');
+  var searchHint = document.getElementById('ofw-search-hint');
+  function doSearch(){
+    var kw = (searchInput.value || '').trim();
+    if(!kw){
+      searchHint.innerHTML = '试试输入 <strong>樱花</strong>、<strong>分镜</strong>、<strong>治愈</strong> 或创作者昵称。';
+    }else{
+      searchHint.innerHTML = '正在为「<strong>' + escapeHtml(kw) + '</strong>」匹配站内作品与创作者，已找到相关专题与影像条目，可在焦点影像与影像墙继续浏览。';
+    }
+    searchHint.classList.add('is-open');
+    clearTimeout(window.__ofwSearchTimer);
+    window.__ofwSearchTimer = setTimeout(function(){ searchHint.classList.remove('is-open'); }, 3600);
+  }
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  if(searchBtn) searchBtn.addEventListener('click', doSearch);
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } });
+  }
+  document.addEventListener('click', function(e){
+    if(searchHint && searchHint.classList.contains('is-open')){
+      if(!searchHint.contains(e.target) && !e.target.closest('.ofw-search')) searchHint.classList.remove('is-open');
+    }
+  });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.querySelectorAll('.ofw-like').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var numEl = btn.querySelector('b');
+      var n = parseInt(numEl.textContent, 10) || 0;
+      if(btn.classList.contains('is-on')){
+        btn.classList.remove('is-on');
+        numEl.textContent = Math.max(0, n - 1);
+      }else{
+        btn.classList.add('is-on');
+        numEl.textContent = n + 1;
+        toast('已记录你的喜欢');
+      }
+    });
+  });
+
+  document.querySelectorAll('.ofw-save').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var saved = btn.classList.toggle('is-saved');
+      btn.textContent = saved ? '★ 已收藏' : '☆ 收藏';
+      toast(saved ? '已加入收藏夹' : '已取消收藏');
+    });
+  });
+
+  /* ---------- 复制链接 ---------- */
+  document.querySelectorAll('.ofw-copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var link = 'https://sakura-overflow.example/works';
+      var done = function(){ toast('链接已复制，可分享给同好'); };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(done).catch(function(){ toast('请手动复制浏览器地址栏链接'); });
+      }else{
+        var ta = document.createElement('textarea');
+        ta.value = link; ta.style.position='fixed'; ta.style.opacity='0';
+        document.body.appendChild(ta); ta.select();
+        try{ document.execCommand('copy'); done(); }catch(err){ toast('请手动复制浏览器地址栏链接'); }
+        document.body.removeChild(ta);
+      }
+    });
+  });
+
+  /* ---------- 标签筛选 ---------- */
+  var filterWrap = document.getElementById('ofw-filter');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#ofw-cards .ofw-card'));
+  if(filterWrap){
+    filterWrap.addEventListener('click', function(e){
+      var btn = e.target.closest('button[data-filter]');
+      if(!btn) return;
+      filterWrap.querySelectorAll('button').forEach(function(b){ b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      var cat = btn.getAttribute('data-filter');
+      cards.forEach(function(card){
+        var show = (cat === 'all') || (card.getAttribute('data-cat') === cat);
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  }
+
+  /* ---------- 创作者档案弹窗 ---------- */
+  var modal = document.getElementById('ofw-modal');
+  var modalTitle = document.getElementById('ofw-modal-title');
+  var modalDesc = document.getElementById('ofw-modal-desc');
+  var modalBody = modal.querySelectorAll('.ofw-modal__field, #ofw-form-send');
+
+  function openModal(title, desc, showForm){
+    if(!modal) return;
+    modalTitle.textContent = title;
+    modalDesc.textContent = desc;
+    modalBody.forEach(function(el){ el.style.display = showForm ? '' : 'none'; });
+    modal.classList.add('is-open');
+  }
+  function closeModal(){ if(modal) modal.classList.remove('is-open'); }
+
+  document.querySelectorAll('.ofw-profile').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-name') || '创作者';
+      openModal(name + ' · 创作者档案',
+        name + ' 已在本站发布作品并参与多个专题企划。完整作品年表、分镜手记与合作请联系编辑部获取；如需约稿，可在联系入口留下需求说明。',
+        false);
+    });
+  });
+
+  /* ---------- 投稿 / 反馈弹窗 ---------- */
+  var openSubmit = document.getElementById('ofw-open-submit');
+  var openReport = document.getElementById('ofw-open-report');
+  if(openSubmit){
+    openSubmit.addEventListener('click', function(){
+      openModal('提交投稿', '填写作品基本信息，我们会在 7 个工作日内回复。请确保作品为本人原创。', true);
+    });
+  }
+  if(openReport){
+    openReport.addEventListener('click', function(){
+      openModal('反馈与举报', '请描述你遇到的问题（内容、版权或体验），我们会在 48 小时内完成初步核查并反馈处理结果。', true);
+    });
+  }
+  document.querySelectorAll('.ofw-apply').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openModal('品牌动态 · 参与方式', '该条动态的详细说明与报名材料清单，可通过投稿邮箱 studio@sakura-overflow.example 获取，邮件主题请注明对应动态标题。', false);
+    });
+  });
+
+  var modalClose = document.getElementById('ofw-modal-close');
+  if(modalClose) modalClose.addEventListener('click', closeModal);
+  if(modal){
+    modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  }
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  var formSend = document.getElementById('ofw-form-send');
+  if(formSend){
+    formSend.addEventListener('click', function(){
+      var name = document.getElementById('ofw-form-name').value.trim();
+      var contact = document.getElementById('ofw-form-contact').value.trim();
+      if(!name || !contact){
+        toast('请先填写昵称与联系方式');
+        return;
+      }
+      closeModal();
+      toast('已收到你的提交，编辑部将尽快回复');
+    });
+  }
+
+  /* ---------- 首屏分享 ---------- */
+  var heroShare = document.getElementById('ofw-hero-share');
+  if(heroShare){
+    heroShare.addEventListener('click', function(){
+      if(navigator.share){
+        navigator.share({ title:'overflow动漫免费樱花 官方网站', text:'一个专注动漫影像的品牌内容社区', url:'https://sakura-overflow.example/' })
+          .catch(function(){});
+      }else{
+        toast('可复制官网链接，分享到微信或微博');
+      }
+    });
+  }
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById('ofw-top');
+  window.addEventListener('scroll', function(){
+    if(!topBtn) return;
+    if(window.scrollY > 520) topBtn.classList.add('is-show');
+    else topBtn.classList.remove('is-show');
+  });
+  if(topBtn){
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({ top:0, behavior:'smooth' });
+    });
+  }
+
+  /* ---------- 数字滚动 ---------- */
+  var counters = document.querySelectorAll('[data-count]');
+  var counted = false;
+  function runCount(){
+    if(counted) return;
+    counted = true;
+    counters.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+      var start = 0, dur = 1100, t0 = performance.now();
+      function step(now){
+        var p = Math.min(1, (now - t0) / dur);
+        var val = Math.floor(start + (target - start) * (1 - Math.pow(1 - p, 3)));
+        el.textContent = val;
+        if(p < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  var hero = document.getElementById('ofw-home');
+  if('IntersectionObserver' in window && hero){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting) runCount(); });
+    }, { threshold:0.3 });
+    io.observe(hero);
+  }else{
+    runCount();
+  }
+})();
+</script>
+</body>
+              </html>
